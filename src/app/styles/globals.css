@@ -1,0 +1,134 @@
+@import url('./blacker.font.css');
+@import url('./graphik.font.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+
+  :root {
+    --color-bg: 0 0% 100%;
+    --color-muted: 210 40% 96.1%;
+
+    --color-font: 223 47% 11%;
+
+    --color-border: 214.3 31.8% 91.4%;
+
+    --color-accent: 233 90% 61%;
+  }
+
+  /* html[data-theme='light'] { */
+  html.light {
+    --color-bg: 0 0% 100%;
+
+    /* --color-muted: 210 40% 96.1%; */
+    --color-muted: 0 0% 25%;
+
+    --color-font: 223 47% 11%;
+
+    --color-border: 214.3 31.8% 91.4%;
+  }
+
+  html.dark {
+    --color-bg: 223 30% 05%;
+
+    /* --color-muted: 223 47% 11%; */
+    --color-muted: 0 0% 83%;
+
+    --color-font: 210 40% 96.1%;
+
+    --color-border: 0 0% 16%;
+  }
+}
+
+/* #D1FFDD hsl(136, 100%, 91%) Green */
+/* #C8C0FF hsl(248, 100%, 88%) Purple */
+/* #FAF8C0 hsl(58, 85%, 87%) Yellow */
+/* #4458F5 hsl(233, 90%, 61%) Blue */
+/* #000 hsl(0, 0%, 0%) Black */
+/* rgb(248,248,248) #F8F8F8 hsl(0, 0%, 97%) White */
+/* rgb(240,240,240) #F0F0F0  hsl(0, 0%, 94%) light border */
+
+:root {
+  --header-height: 4.75rem;
+  --transition: cubic-bezier(0.45, 0.05, 0, 1)
+}
+
+body {
+  font-family: 'Graphik', sans-serif;
+}
+
+.custom-transition {
+  transition-timing-function: var(--transition);
+}
+
+/* Lenis scroll configuration */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Tailwind css overwrite  */
+.font-serif {
+  font-family: 'Blacker Display', serif;
+}
+
+/* General styles */
+.font-title {
+  font-size: 4rem;
+}
+
+.btn-cta {
+  position: relative;
+  color: white;
+  background-image: linear-gradient(to top, hsl(var(--color-accent)), hsl(var(--color-accent)));
+  z-index: 1;
+}
+
+.btn-cta::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.6s var(--transition);
+  background-image: linear-gradient(to top, #0DAFD9, hsl(var(--color-accent)));
+  opacity: 0;
+}
+
+.btn-cta:hover::before {
+  opacity: 1;
+}
+
+.main-container {
+  width: min(1600px, 100%);
+  margin: 0 auto;
+  padding: 0 5rem;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: calc(100vh - var(--header-height));
+}
