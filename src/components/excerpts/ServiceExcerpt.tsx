@@ -3,16 +3,14 @@ import Btncta from "../Btncta"
 
 type ServiceExcerptProps = {
   name: string
-  color: "green" | "yellow" | "purple" | "sky"
+  bg: string
   count: string
 }
 
-const ServiceExcerpt = ({ name, color, count }: ServiceExcerptProps) => {
-  const bgClr = `bg-clr-${color}`
-
+const ServiceExcerpt = ({ name, bg, count }: ServiceExcerptProps) => {
   return (
     <article
-      className={`flex min-h-[400px] flex-col overflow-hidden rounded-[14px] ${bgClr} p-12`}
+      className={`flex min-h-[400px] flex-col overflow-hidden rounded-[14px] ${bg} p-12`}
     >
       <div className="flex h-full flex-col gap-2">
         <div className="grid h-full min-h-[500px] w-full grid-cols-2">

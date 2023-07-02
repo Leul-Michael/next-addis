@@ -20,17 +20,17 @@ const Services = () => {
           </p>
         </div>
       </div>
-      <ServiceExcerpt count="01" name="UI / UX Design." color="sky" />
-      <ServiceExcerpt count="02" name="Web developement." color="green" />
+      <ServiceExcerpt count="01" name="UI / UX Design." bg="bg-clr-sky" />
+      <ServiceExcerpt count="02" name="Web developement." bg="bg-clr-green" />
       <ServiceExcerpt
         count="03"
         name="Mobile App developement."
-        color="purple"
+        bg="bg-clr-purple"
       />
       <ServiceExcerpt
         count="04"
         name="Custom Software developement."
-        color="yellow"
+        bg="bg-clr-yellow"
       />
     </section>
   )
