@@ -16,7 +16,7 @@ const Header = () => {
           isScrolled
             ? "mx-auto w-[95%] rounded-[8px] bg-clr-main/20 text-clr-font backdrop-blur-[100px]"
             : "header h-[5rem] w-full bg-transparent"
-        } ${showMenu ? "-translate-y-[200%]" : "translate-y-0"}`}
+        } ${showMenu ? "-translate-y-[135%]" : "translate-y-0"}`}
       >
         <nav
           className={`custom-transition mx-auto flex w-full max-w-screen-2xl items-center justify-between duration-300 ${
