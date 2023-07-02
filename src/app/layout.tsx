@@ -1,7 +1,7 @@
 import Header from "@/components/header/Header"
 import "./styles/globals.css"
 import ThemeProvider from "@/components/theme/ThemeProvider"
-import { ScrollContextProvider } from "@/context/ScrollContext"
+import { GlobalContextProvider } from "@/context/GlobalContext"
 
 export const metadata = {
   title: "Create Next App",
@@ -17,10 +17,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`bg-clr-main text-clr-font`}>
         <ThemeProvider>
-          <ScrollContextProvider>
+          <GlobalContextProvider>
             <Header />
             <main className="main-container">{children}</main>
-          </ScrollContextProvider>
+          </GlobalContextProvider>
         </ThemeProvider>
       </body>
     </html>

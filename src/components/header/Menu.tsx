@@ -1,23 +1,20 @@
+import useGlobals from "@/context/GlobalContext"
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
-import React, { Dispatch, SetStateAction } from "react"
 
-type MenuProps = {
-  show: boolean
-  setShow: Dispatch<SetStateAction<boolean>>
-}
-
-const Menu = ({ show, setShow }: MenuProps) => {
+const Menu = () => {
   const router = useRouter()
   const pathname = usePathname()
+  const { showMenu, setShowMenu } = useGlobals()
+
   return (
     <section
       className={`fixed left-0 ${
-        show ? "top-[0%]" : "top-[-100%]"
+        showMenu ? "top-[0%]" : "top-[-100%]"
       } custom-transition main-container z-[100] flex h-screen flex-col gap-5 overflow-y-auto bg-clr-font text-clr-main duration-500`}
     >
       <button
-        onClick={() => setShow((prev) => !prev)}
+        onClick={() => setShowMenu((prev) => !prev)}
         className="group relative mr-3 mt-4 flex h-[50px] w-[50px] flex-col items-center justify-center gap-1 self-end overflow-hidden rounded-[100%] border border-clr-border pt-[0.35rem] hover:border-clr-accent"
       >
         <span className="custom-transition absolute left-0 top-0 h-full w-full scale-0 bg-clr-accent duration-300 group-hover:scale-100"></span>

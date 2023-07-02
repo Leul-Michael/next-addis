@@ -3,15 +3,26 @@
 import Link from "next/link"
 import MenuButton from "./MenuButton"
 import Menu from "./Menu"
-import { useState } from "react"
+import useGlobals from "@/context/GlobalContext"
 
 const Header = () => {
-  const [show, setShow] = useState(false)
+  const { showMenu, isScrolled } = useGlobals()
+
   return (
     <>
-      <Menu show={show} setShow={setShow} />
-      <header className="header sticky left-0 top-0 flex h-[5rem] w-full overflow-hidden bg-transparent">
-        <nav className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-5 md:px-20">
+      <Menu />
+      <header
+        className={`custom-transition sticky left-0 top-[1rem] z-[100] flex h-[4rem] overflow-hidden duration-300 ${
+          isScrolled
+            ? "mx-auto w-[95%] rounded-[8px] bg-clr-main/20 text-clr-font backdrop-blur-[100px]"
+            : "header h-[5rem] w-full bg-transparent"
+        } ${showMenu ? "-translate-y-[200%]" : "translate-y-0"}`}
+      >
+        <nav
+          className={`custom-transition mx-auto flex w-full max-w-screen-2xl items-center justify-between duration-300 ${
+            isScrolled ? "px-10" : "px-5 md:px-20"
+          }`}
+        >
           <div className="flex items-center gap-7">
             <Link href="/">
               <h1 className="relative flex items-baseline">
@@ -27,7 +38,7 @@ const Header = () => {
               </h1>
             </Link>
           </div>
-          <MenuButton setShow={setShow} />
+          <MenuButton />
         </nav>
       </header>
     </>

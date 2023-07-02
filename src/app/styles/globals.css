@@ -63,7 +63,7 @@
 /* rgb(240,240,240) #F0F0F0  hsl(0, 0%, 94%) light border */
 
 :root {
-  --header-height: 4.75rem;
+  --header-height: 4rem;
   --transition: cubic-bezier(0.45, 0.05, 0, 1)
 }
 
@@ -157,6 +157,82 @@ html.lenis {
 
 .header-font-clr {
   background: hsla(210, 40%, 96.1%, 0.7);
+}
+
+/* Toogle Theme */
+.header__theme-icon {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 27px;
+}
+
+/* Hide default HTML checkbox */
+.header__theme-icon input {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* The slider */
+.header__theme-icon .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: hsl(223, 30%, 05%);
+  -webkit-transition: all 0.6s var(--transition);
+  transition: all 0.6s var(--transition);
+}
+
+.header__theme-icon .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 99%);
+  -webkit-transition: all 0.6s var(--transition);
+  transition: all 0.6s var(--transition);
+  z-index: 5;
+}
+
+.header__theme-icon input:checked+.slider {
+  background-color: hsl(0, 0%, 99%);
+}
+
+.header__theme-icon input:checked+.slider::before {
+  background-color: hsl(223, 30%, 05%);
+}
+
+.header__theme-icon input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.header__theme-dark,
+.header__theme-light {
+  position: absolute;
+  top: 5px;
+  z-index: 1;
+  color: hsl(var(--color-border));
+  pointer-events: none;
+}
+
+.header__theme-dark {
+  left: 5px;
+}
+
+.header__theme-light {
+  right: 5px;
 }
 
 /* Hero */
