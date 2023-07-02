@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <Menu show={show} setShow={setShow} />
-      <header className="sticky left-0 top-0 flex h-[5rem] w-full overflow-hidden bg-clr-main">
+      <header className="header sticky left-0 top-0 flex h-[5rem] w-full overflow-hidden bg-transparent">
         <nav className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-5 md:px-20">
           <div className="flex items-center gap-7">
             <Link href="/">

@@ -28,7 +28,7 @@ const Menu = ({ show, setShow }: MenuProps) => {
           className={`custom-transition h-[2px] w-[65%] -translate-y-[0.35rem] translate-x-[0.15rem] rotate-45 bg-clr-main duration-500`}
         ></span>
       </button>
-      <div className="flex gap-1">
+      <div className="flex gap-5">
         <div className="flex flex-col gap-1">
           <div className="mb-2 flex items-center gap-2">
             <span className="flex h-[2px] w-5 bg-clr-main"></span>
@@ -91,6 +91,36 @@ const Menu = ({ show, setShow }: MenuProps) => {
               <span>Contact</span>
             </div>
           </Link>
+        </div>
+        <div className="ml-auto flex w-full flex-wrap gap-12 self-end border-t border-clr-border py-8 md:w-[60%]">
+          <div className="flex flex-col gap-1">
+            <div className="mb-2 flex items-center gap-2">
+              <span className="flex h-[2px] w-5 bg-clr-main"></span>
+              <span className="font-medium">Info</span>
+            </div>
+            <Link href="/">Testimonials</Link>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <div className="mb-2 flex items-center gap-2">
+              <span className="flex h-[2px] w-5 bg-clr-main"></span>
+              <span className="font-medium">Socials</span>
+            </div>
+            <Link href="/">Linkedin</Link>
+            <Link href="/">Instagram</Link>
+            <Link href="/">Twitter</Link>
+            <Link href="/">Behance</Link>
+          </div>
+
+          <div className="ml-auto flex flex-col gap-1">
+            <div className="mb-2 flex items-center gap-2">
+              <span className="flex h-[2px] w-5 bg-clr-main"></span>
+              <span className="font-medium">Say Hi</span>
+            </div>
+            <Link href="/" className="text-2xl font-medium leading-none">
+              You@gmail.com
+            </Link>
+          </div>
         </div>
       </div>
     </section>
