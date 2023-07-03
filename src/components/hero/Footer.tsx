@@ -9,7 +9,7 @@ import { BiLogoTelegram } from "react-icons/bi"
 const Footer = () => {
   return (
     <footer className="flex h-full w-full flex-col rounded-[50px_50px_0px_0px] border-t border-clr-border pb-12 pt-8">
-      <div className="main-container auto-h flex w-full items-start justify-between">
+      <div className="main-container auto-h flex w-full flex-col gap-16 md:flex-row md:items-start md:justify-between md:gap-8">
         <div className="flex w-full items-center gap-7">
           <Link href="/">
             <h1 className="relative flex items-baseline">
@@ -33,7 +33,7 @@ const Footer = () => {
               <li className="text-sm text-clr-muted">+2519404040</li>
             </ul>
           </div>
-          <div className="flex items-center justify-between gap-8">
+          <div className="flex flex-col flex-wrap items-center justify-between gap-8 sm:flex-row">
             <ul className="flex items-center gap-8">
               <BiLogoTelegram
                 size={30}

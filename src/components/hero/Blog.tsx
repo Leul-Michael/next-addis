@@ -8,7 +8,7 @@ const Blog = () => {
       <h1 className="font-subtitle font-serif font-semibold leading-none">
         Insights.
       </h1>
-      <div className="grid grid-cols-3 gap-16">
+      <div className="lg grid grid-cols-blog gap-8 lg:gap-16">
         <BlogExcerpt />
         <BlogExcerpt />
         <BlogExcerpt />

@@ -20,6 +20,9 @@ module.exports = {
         "clr-sky": "hsl(var(--color-sky) / <alpha-value>)",
         "clr-dark-green": "hsl(var(--color-dark-green) / <alpha-value>)",
       },
+      gridTemplateColumns: {
+        blog: "repeat(auto-fit, minmax(300px, 1fr))",
+      },
     },
   },
   plugins: [],

@@ -9,7 +9,7 @@ const MenuButton = () => {
   const { setShowMenu, isScrolled } = useGlobals()
 
   return (
-    <div className="relative flex w-36 overflow-hidden">
+    <div className="relative flex w-28 overflow-hidden">
       <div
         tabIndex={0}
         className="header__theme-icon"
@@ -23,7 +23,7 @@ const MenuButton = () => {
       </div>
       <button
         onClick={() => setShowMenu((prev) => !prev)}
-        className="absolute right-0 top-0 flex aspect-square h-full w-[65%] flex-col items-end justify-center gap-1 rounded-[100%] px-5"
+        className="absolute right-0 top-0 flex aspect-square h-full w-[50%] flex-col items-end justify-center gap-1 rounded-[100%] md:w-[65%] md:px-5"
       >
         <span
           className={`h-[2px] w-[80%] ${

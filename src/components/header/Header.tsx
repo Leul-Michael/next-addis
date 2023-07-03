@@ -24,7 +24,7 @@ const Header = () => {
       >
         <nav
           className={`custom-transition mx-auto flex w-full max-w-screen-2xl items-center justify-between duration-300 ${
-            isScrolled ? "px-10" : "px-5 md:px-20"
+            isScrolled ? "px-5 md:px-10" : "px-5 md:px-20"
           }`}
         >
           <div className="flex items-center gap-7">
@@ -33,10 +33,10 @@ const Header = () => {
                 <span className="absolute left-[1.45rem] top-0 text-[0.5rem]">
                   digital agency
                 </span>
-                <span className="font-serif text-[1.75rem] font-black">
+                <span className="font-serif text-[1.5rem] font-black md:text-[1.75rem]">
                   Next
                 </span>
-                <span className="font-serif text-[1.45rem] font-semibold uppercase">
+                <span className="font-serif text-[1.25rem] font-semibold uppercase md:text-[1.45rem]">
                   Addis.
                 </span>
               </h1>

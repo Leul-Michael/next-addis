@@ -13,11 +13,17 @@ const Project = () => {
           Teams Scale Their Design Roadmaps At Lightning Speeds
         </p>
       </div>
-      <div className="flex gap-5">
+      <div className="hidden flex-col gap-5 lg:flex lg:flex-row">
         <ProjectExcerpt />
         <ProjectExcerpt yellow />
       </div>
-      <div className="flex gap-5">
+      <div className="hidden flex-col gap-5 lg:flex lg:flex-row">
+        <ProjectExcerpt />
+        <ProjectExcerpt yellow />
+      </div>
+      <div className="flex flex-col gap-8 lg:hidden lg:flex-row">
+        <ProjectExcerpt />
+        <ProjectExcerpt yellow />
         <ProjectExcerpt />
         <ProjectExcerpt yellow />
       </div>

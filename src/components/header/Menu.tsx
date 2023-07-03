@@ -16,7 +16,7 @@ const Menu = () => {
       <div className="main-container flex flex-col gap-5 overflow-y-auto">
         <button
           onClick={() => setShowMenu((prev) => !prev)}
-          className="group relative mr-3 mt-4 flex h-[50px] w-[50px] flex-col items-center justify-center gap-1 self-end overflow-hidden rounded-[100%] border border-clr-border pt-[0.35rem] hover:border-clr-accent"
+          className="group relative mt-4 flex h-[50px] w-[50px] flex-col items-center justify-center gap-1 self-end overflow-hidden rounded-[100%] border border-clr-border pt-[0.35rem] hover:border-clr-accent md:mr-3"
         >
           <span className="custom-transition absolute left-0 top-0 h-full w-full scale-0 bg-clr-accent duration-300 group-hover:scale-100"></span>
           <span
@@ -90,36 +90,6 @@ const Menu = () => {
               </div>
             </Link>
           </div>
-          {/* <div className="ml-auto flex w-full flex-wrap gap-12 self-end border-t border-clr-border py-8 md:w-[60%]">
-            <div className="flex flex-col gap-1">
-              <div className="mb-2 flex items-center gap-2">
-                <span className="flex h-[2px] w-5 bg-clr-main"></span>
-                <span className="font-medium">Info</span>
-              </div>
-              <Link href="/">Testimonials</Link>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <div className="mb-2 flex items-center gap-2">
-                <span className="flex h-[2px] w-5 bg-clr-main"></span>
-                <span className="font-medium">Socials</span>
-              </div>
-              <Link href="/">Linkedin</Link>
-              <Link href="/">Instagram</Link>
-              <Link href="/">Twitter</Link>
-              <Link href="/">Behance</Link>
-            </div>
-
-            <div className="ml-auto flex flex-col gap-1">
-              <div className="mb-2 flex items-center gap-2">
-                <span className="flex h-[2px] w-5 bg-clr-main"></span>
-                <span className="font-medium">Say Hi</span>
-              </div>
-              <Link href="/" className="text-2xl font-medium leading-none">
-                You@gmail.com
-              </Link>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>

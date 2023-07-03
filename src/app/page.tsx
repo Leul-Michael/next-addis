@@ -21,8 +21,8 @@ export default function Home() {
         <source src="/video/hero.mp4" type="video/mp4" />
       </video>
       <div className="main-container flex flex-col rounded-[0px_0px_50px_50px]">
-        <section className=" hero flex items-center py-16">
-          <div className="flex w-full flex-col gap-8">
+        <section className="hero flex flex-col items-start justify-end pb-32 md:justify-center md:py-16">
+          <div className="flex w-full max-w-[650px] flex-col gap-8">
             <h1 className="font-title font-serif font-bold leading-none">
               Digital Innovation You Need to Build, Scale & Grow.
             </h1>
@@ -32,7 +32,6 @@ export default function Home() {
             </p>
             <Btncta name="Get a quote" to="/" />
           </div>
-          <div className="flex w-full flex-col"></div>
         </section>
         {/* About section */}
         <About />
