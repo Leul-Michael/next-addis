@@ -3,7 +3,7 @@ import React from "react"
 
 const BlogExcerpt = () => {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-[14px] border border-clr-border lg:h-[400px]">
+    <article className="flex h-full min-h-[400px] flex-col overflow-hidden rounded-[14px] border border-clr-border lg:h-[400px]">
       <Image
         src="/blog.png"
         alt="blog image"
