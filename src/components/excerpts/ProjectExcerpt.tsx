@@ -33,7 +33,7 @@ const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
         <h1 className="font-subtitle hero-text-dark w-full font-serif font-bold leading-none sm:w-[60%]">
           Digital Innovation.
         </h1>
-        <div className="custom-transition flex max-w-[60%] flex-col gap-4 duration-[600ms] lg:opacity-0 lg:group-hover:opacity-100">
+        <div className="custom-transition flex flex-col gap-4 duration-[600ms] lg:max-w-[60%] lg:opacity-0 lg:group-hover:opacity-100">
           <p className="hero-text-dark text-lg leading-[1.2]">
             We help <span className="font-medium underline">Fast Growth</span>{" "}
             Teams Scale Their Design Roadmaps At Lightning Speeds
