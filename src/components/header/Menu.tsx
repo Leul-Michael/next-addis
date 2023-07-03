@@ -90,7 +90,7 @@ const Menu = () => {
               </div>
             </Link>
           </div>
-          <div className="ml-auto flex w-full flex-wrap gap-12 self-end border-t border-clr-border py-8 md:w-[60%]">
+          {/* <div className="ml-auto flex w-full flex-wrap gap-12 self-end border-t border-clr-border py-8 md:w-[60%]">
             <div className="flex flex-col gap-1">
               <div className="mb-2 flex items-center gap-2">
                 <span className="flex h-[2px] w-5 bg-clr-main"></span>
@@ -119,7 +119,7 @@ const Menu = () => {
                 You@gmail.com
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -18,8 +18,8 @@ const MenuButton = () => {
       >
         <input tabIndex={-1} type="checkbox" />
         <span className="slider"></span>
-        <BsMoonFill className="header__theme-dark" />
-        <BsSunFill className="header__theme-light" />
+        <BsMoonFill className="header__theme-light" />
+        <BsSunFill className="header__theme-dark" />
       </div>
       <button
         onClick={() => setShowMenu((prev) => !prev)}

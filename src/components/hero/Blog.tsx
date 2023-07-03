@@ -1,9 +1,10 @@
 import React from "react"
 import BlogExcerpt from "../excerpts/BlogExcerpt"
+import Btncta from "../Btncta"
 
 const Blog = () => {
   return (
-    <section className="flex flex-col gap-16 py-20">
+    <section className="flex flex-col gap-16 py-24">
       <h1 className="font-subtitle font-serif font-semibold leading-none">
         Insights.
       </h1>
@@ -12,6 +13,7 @@ const Blog = () => {
         <BlogExcerpt />
         <BlogExcerpt />
       </div>
+      <Btncta to="/" name="Read Our Blog" />
     </section>
   )
 }

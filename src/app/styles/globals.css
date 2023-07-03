@@ -142,6 +142,10 @@ html.lenis {
   overflow-x: hidden;
 }
 
+.main-container.auto-h {
+  min-height: 100%;
+}
+
 /* Header */
 .header {
   color: hsl(210, 40%, 96.1%);
@@ -185,7 +189,7 @@ html.lenis {
   right: 0;
   bottom: 0;
   border-radius: 34px;
-  background-color: hsl(223, 30%, 05%);
+  background-color: hsl(0, 0%, 8%);
   -webkit-transition: all 0.6s var(--transition);
   transition: all 0.6s var(--transition);
 }
@@ -198,18 +202,18 @@ html.lenis {
   left: 4px;
   bottom: 4px;
   border-radius: 50%;
-  background-color: hsl(0, 0%, 99%);
+  background-color: hsl(0, 0%, 20%);
   -webkit-transition: all 0.6s var(--transition);
   transition: all 0.6s var(--transition);
   z-index: 5;
 }
 
 .header__theme-icon input:checked+.slider {
-  background-color: hsl(0, 0%, 99%);
+  background-color: hsl(0, 0%, 20%);
 }
 
 .header__theme-icon input:checked+.slider::before {
-  background-color: hsl(223, 30%, 05%);
+  background-color: hsl(0, 0%, 8%);
 }
 
 .header__theme-icon input:checked+.slider:before {
@@ -223,7 +227,7 @@ html.lenis {
   position: absolute;
   top: 5px;
   z-index: 1;
-  color: hsl(var(--color-border));
+  color: hsl(0, 0%, 100%);
   pointer-events: none;
 }
 

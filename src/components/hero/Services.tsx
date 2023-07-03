@@ -1,24 +1,53 @@
-import React from "react"
-import Btncta from "../Btncta"
+"use client"
+
+import { useEffect, useRef } from "react"
 import ServiceExcerpt from "../excerpts/ServiceExcerpt"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const Services = () => {
+  const servicesWrapper = useRef<HTMLScriptElement | null>(null)
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const steps = gsap.utils.toArray("#step-wrapper")
+
+    const ctx = gsap.context(() => {
+      steps.forEach((step: any, index: number) => {
+        gsap.to(step, {
+          scrollTrigger: {
+            trigger: step,
+            pin: true,
+            start: "top 5%",
+            end: () =>
+              steps.length === index + 1
+                ? `${step?.offsetHight}`
+                : `bottom -${(steps.length - (index + 2)) * 100}%`,
+            pinSpacing: false,
+          },
+        })
+      })
+    }, servicesWrapper)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section className="flex flex-col gap-24 py-20">
-      <div className="flex items-start justify-between gap-16">
-        <p className="max-w-[400px] text-lg leading-[1.2] text-clr-muted">
-          Never let a bad design decesions ruin your business. We are here
-          Transforming brands for growth
+    <section
+      ref={servicesWrapper}
+      className="flex h-full w-full flex-col gap-16 py-20"
+    >
+      <div className="flex max-w-[600px] flex-col gap-8">
+        <h1 className="font-subtitle font-serif font-semibold leading-none">
+          Services.
+        </h1>
+        <p className="text-xl leading-[1.2] text-clr-muted">
+          We unite design, technology and the brightest ideas to deliver
+          sustainable, sharp,{" "}
+          <span className="font-medium underline">aesthetic</span> and{" "}
+          <span className="font-medium underline">high-functioning</span>{" "}
+          products.
         </p>
-        <div className="flex flex-col gap-14">
-          <p className="max-w-[650px] text-4xl leading-[1.2] text-clr-muted">
-            We unite design, technology and the brightest ideas to deliver
-            sustainable, sharp,{" "}
-            <span className="font-medium underline">aesthetic</span> and{" "}
-            <span className="font-medium underline">high-functioning</span>{" "}
-            products.
-          </p>
-        </div>
       </div>
       <ServiceExcerpt count="01" name="UI / UX Design." bg="bg-clr-sky" />
       <ServiceExcerpt count="02" name="Web developement." bg="bg-clr-green" />

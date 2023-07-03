@@ -10,6 +10,7 @@ type ServiceExcerptProps = {
 const ServiceExcerpt = ({ name, bg, count }: ServiceExcerptProps) => {
   return (
     <article
+      id="step-wrapper"
       className={`flex min-h-[400px] flex-col overflow-hidden rounded-[14px] ${bg} p-12`}
     >
       <div className="flex h-full flex-col gap-2">

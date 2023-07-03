@@ -19,7 +19,7 @@ export default function RootLayout({
         <ThemeProvider>
           <GlobalContextProvider>
             <Header />
-            <main className="main-container">{children}</main>
+            <main>{children}</main>
           </GlobalContextProvider>
         </ThemeProvider>
       </body>
