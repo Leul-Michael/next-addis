@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <section
       className={`fixed left-0 ${
-        showMenu ? "top-[0%]" : "top-[-100%]"
+        showMenu ? "top-[0%]" : "top-[-120%]"
       } custom-transition z-[100] flex h-screen w-full  bg-clr-font text-clr-main duration-500`}
     >
       <div className="main-container flex flex-col gap-5 overflow-y-auto">
