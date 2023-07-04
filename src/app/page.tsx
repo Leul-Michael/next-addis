@@ -32,7 +32,14 @@ export default function Home() {
               We help <span className="font-medium underline">Fast Growth</span>{" "}
               Teams Scale Their Design Roadmaps At Lightning Speeds
             </p>
-            <Btncta name="Get a quote" to="/" />
+            <div className="flex flex-wrap items-center gap-4">
+              <Btncta name="Get a Quote" to="/" />
+              <Btncta
+                className="btn-cta-outline light"
+                name="Explore"
+                to="#about"
+              />
+            </div>
           </div>
         </section>
         {/* About section */}

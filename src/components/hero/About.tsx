@@ -3,7 +3,7 @@ import Btncta from "../Btncta"
 
 const About = () => {
   return (
-    <section className="flex flex-col gap-16 py-20">
+    <section id="about" className="flex flex-col gap-16 py-20">
       <div className="flex flex-col items-start justify-center gap-16 lg:flex-row lg:justify-between">
         <p className="max-w-[400px] text-lg leading-[1.2] text-clr-muted">
           Never let a bad design decesions ruin your business. We are here

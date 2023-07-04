@@ -121,6 +121,13 @@ html.lenis {
   color: hsl(var(--color-font));
   background: transparent;
   border: 1px solid hsl(var(--color-border));
+  font-weight: 500;
+  border-radius: 1px;
+}
+
+.btn-cta.light {
+  color: hsl(210 40% 96.1%);
+  border: 1px solid hsl(214.3 31.8% 91.4%);
 }
 
 .btn-cta::before {
