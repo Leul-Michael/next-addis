@@ -9,9 +9,9 @@ type TechnologyExcerptProps = {
 const TechnologyExcerpt = ({ name, image }: TechnologyExcerptProps) => {
   return (
     <motion.article
-      initial={{ y: 10, scale: 0.25 }}
+      initial={{ y: 10, scale: 0 }}
       animate={{ y: 0, scale: 1 }}
-      exit={{ y: -10, scale: 0.25 }}
+      exit={{ y: -10, scale: 0 }}
       transition={{ duration: 0.5 }}
       className={`flex h-full max-w-[500px] flex-col items-center justify-center gap-8 overflow-hidden
         rounded-[6px] bg-clr-border/30 px-5 pb-3 pt-5 lg:py-3`}
