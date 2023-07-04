@@ -8,9 +8,13 @@ type TechnologyExcerptProps = {
 const TechnologyExcerpt = ({ name, image }: TechnologyExcerptProps) => {
   return (
     <article
-      className={`flex h-full flex-col justify-center overflow-hidden rounded-[4px] bg-clr-border/30 px-5 py-3`}
+      className={`rounded-[6 px] flex h-full flex-col items-center justify-center
+        overflow-hidden bg-clr-border/30 px-5 py-3`}
     >
-      <div className="flex max-w-[500px] flex-col gap-5 rounded-[4px]">
+      <div
+        className="rounded-[6 px] flex max-w-[500px] flex-col items-center justify-center
+        gap-5"
+      >
         <h1 className="max-w-[400px] text-base font-semibold leading-none md:text-xl">
           {name}
         </h1>
