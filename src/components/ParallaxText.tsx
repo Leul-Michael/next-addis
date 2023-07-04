@@ -71,7 +71,10 @@ const ParallaxText = ({
     <div className="parallax">
       <motion.div className="scroller font-serif" style={{ x }}>
         {[...Array(clone).keys()].map((i) => (
-          <span className="font-title font-serif font-bold leading-none">
+          <span
+            key={i}
+            className="font-title font-serif font-bold leading-none"
+          >
             {children}{" "}
           </span>
         ))}
