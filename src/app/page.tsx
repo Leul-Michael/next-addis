@@ -1,4 +1,5 @@
 import Btncta from "@/components/Btncta"
+import ParallaxText from "@/components/ParallaxText"
 import About from "@/components/hero/About"
 import Blog from "@/components/hero/Blog"
 import Contact from "@/components/hero/Contact"
@@ -54,9 +55,13 @@ export default function Home() {
         <Testimonials />
         {/* Blog Section */}
         <Blog />
-        {/* Contact section */}
-        <Contact />
       </div>
+      <ParallaxText baseVelocity={5} clone={6}>
+        Next Addis
+      </ParallaxText>
+      <ParallaxText baseVelocity={-5}>Let&apos;s work together</ParallaxText>
+      {/* Contact section */}
+      <Contact />
       {/* Footer Section */}
       <Footer />
     </>
