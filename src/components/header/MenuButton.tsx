@@ -9,7 +9,7 @@ const MenuButton = () => {
   const { setShowMenu, isScrolled } = useGlobals()
 
   return (
-    <div className="relative flex w-28 overflow-hidden">
+    <div className="relative flex w-28 overflow-hidden lg:w-36">
       <div
         tabIndex={0}
         className="header__theme-icon"
