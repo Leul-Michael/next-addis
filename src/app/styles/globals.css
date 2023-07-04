@@ -134,6 +134,23 @@ html.lenis {
   opacity: 1;
 }
 
+.tab-active {
+  position: relative;
+  color: white;
+}
+
+.tab-active::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.6s var(--transition);
+  background-image: linear-gradient(to top, #0DAFD9, hsl(var(--color-accent)));
+}
+
 .main-container {
   width: min(1600px, 100%);
   margin: 0 auto;

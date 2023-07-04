@@ -1,7 +1,8 @@
 import Header from "@/components/header/Header"
 import "./styles/globals.css"
-import ThemeProvider from "@/components/theme/ThemeProvider"
+import ThemeProvider from "@/components/ThemeProvider"
 import { GlobalContextProvider } from "@/context/GlobalContext"
+import FramerProvider from "@/components/FramerProvider"
 
 export const metadata = {
   title: "Create Next App",
@@ -16,12 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`bg-clr-main text-clr-font`}>
-        <ThemeProvider>
-          <GlobalContextProvider>
-            <Header />
-            <main>{children}</main>
-          </GlobalContextProvider>
-        </ThemeProvider>
+        <FramerProvider>
+          <ThemeProvider>
+            <GlobalContextProvider>
+              <Header />
+              <main>{children}</main>
+            </GlobalContextProvider>
+          </ThemeProvider>
+        </FramerProvider>
       </body>
     </html>
   )

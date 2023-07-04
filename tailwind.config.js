@@ -22,6 +22,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         blog: "repeat(auto-fit, minmax(300px, 1fr))",
+        tech: "repeat(auto-fill, minmax(120px, 1fr))",
       },
     },
   },

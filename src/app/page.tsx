@@ -5,6 +5,7 @@ import Contact from "@/components/hero/Contact"
 import Footer from "@/components/hero/Footer"
 import Project from "@/components/hero/Project"
 import Services from "@/components/hero/Services"
+import Technology from "@/components/hero/Technology"
 
 export default function Home() {
   return (
@@ -37,6 +38,8 @@ export default function Home() {
         <About />
         {/* Projects Section */}
         <Project />
+        {/* Technology Section */}
+        <Technology />
         {/* Services Section */}
         <Services />
         {/* Blog Section */}
