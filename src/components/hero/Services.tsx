@@ -26,7 +26,7 @@ const Services = () => {
                 ? `${step?.offsetHight}`
                 : `bottom -${(steps.length - (index + 2)) * 100}%`,
             pinSpacing: false,
-            anticipatePin: 1,
+            anticipatePin: 0.5,
           },
         })
       })
