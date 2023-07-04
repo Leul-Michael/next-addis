@@ -69,7 +69,7 @@ const Technology = () => {
                     onClick={() => setTab(t)}
                     className={`${
                       tab.id === t.id ? "tab-active" : ""
-                    } cursor-pointer whitespace-nowrap rounded-[1px] border border-clr-border px-5 py-[0.4rem]`}
+                    } cursor-pointer whitespace-nowrap rounded-[6px] border border-clr-border px-5 py-[0.4rem]`}
                   >
                     {t.name}
                   </span>
