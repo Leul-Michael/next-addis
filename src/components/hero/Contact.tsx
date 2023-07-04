@@ -3,7 +3,7 @@ import Btncta from "../Btncta"
 
 const Contact = () => {
   return (
-    <div className="main-container">
+    <div className="main-container auto-h">
       <section className="flex flex-col gap-16 py-24">
         <div className="flex flex-col gap-16 lg:flex-row lg:justify-between">
           <div className="flex w-full flex-col gap-8">
