@@ -17,7 +17,7 @@ const About = () => {
             designs and crafting experiences that bring positive change and
             value.
           </p>
-          <Btncta to="/" name="More about us" />
+          <Btncta className="btn-cta-outline" to="/" name="More About Us" />
         </div>
       </div>
     </section>

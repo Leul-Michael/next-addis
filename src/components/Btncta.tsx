@@ -1,17 +1,17 @@
 import Link from "next/link"
-import React from "react"
 import { BsArrowRightCircleFill } from "react-icons/bs"
 
 type BtnctaProps = {
   to: string
   name: string
+  className?: string
 }
 
-const Btncta = ({ to = "/", name }: BtnctaProps) => {
+const Btncta = ({ to = "/", name, className = "" }: BtnctaProps) => {
   return (
     <Link
       href={to}
-      className="btn-cta group flex min-w-[200px] items-center justify-between self-start px-5 py-[0.85rem]"
+      className={`btn-cta group flex min-w-[200px] items-center justify-between gap-4 self-start px-5 py-[0.85rem] ${className}`}
     >
       <span>{name}</span>
       <BsArrowRightCircleFill

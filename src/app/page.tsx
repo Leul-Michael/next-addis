@@ -6,6 +6,7 @@ import Footer from "@/components/hero/Footer"
 import Project from "@/components/hero/Project"
 import Services from "@/components/hero/Services"
 import Technology from "@/components/hero/Technology"
+import Testimonials from "@/components/hero/Testimonials"
 
 export default function Home() {
   return (
@@ -38,10 +39,12 @@ export default function Home() {
         <About />
         {/* Projects Section */}
         <Project />
-        {/* Technology Section */}
-        <Technology />
         {/* Services Section */}
         <Services />
+        {/* Technology Section */}
+        <Technology />
+        {/* Testimonials Section */}
+        <Testimonials />
         {/* Blog Section */}
         <Blog />
         {/* Contact section */}

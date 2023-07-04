@@ -113,8 +113,14 @@ html.lenis {
 .btn-cta {
   position: relative;
   color: white;
-  background-image: linear-gradient(to top, hsl(var(--color-accent)), hsl(var(--color-accent)));
+  background: linear-gradient(to top, hsl(var(--color-accent)), hsl(var(--color-accent)));
   z-index: 1;
+}
+
+.btn-cta-outline {
+  color: hsl(var(--color-font));
+  background: transparent;
+  border: 1px solid hsl(var(--color-border));
 }
 
 .btn-cta::before {
@@ -125,13 +131,17 @@ html.lenis {
   bottom: 0;
   left: 0;
   z-index: -1;
-  transition: opacity 0.6s var(--transition);
+  transition: opacity 0.6s var(--transition), color 0.6s var(--transition);
   background-image: linear-gradient(to top, #0DAFD9, hsl(var(--color-accent)));
   opacity: 0;
 }
 
 .btn-cta:hover::before {
   opacity: 1;
+}
+
+.btn-cta.btn-cta-outline:hover {
+  color: white;
 }
 
 .tab-active {

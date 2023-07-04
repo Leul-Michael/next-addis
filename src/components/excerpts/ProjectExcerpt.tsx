@@ -38,7 +38,7 @@ const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
             We help <span className="font-medium underline">Fast Growth</span>{" "}
             Teams Scale Their Design Roadmaps At Lightning Speeds
           </p>
-          <Btncta name="view showcase" to="/" />
+          <Btncta name="View Showcase" to="/" />
         </div>
       </div>
     </article>
