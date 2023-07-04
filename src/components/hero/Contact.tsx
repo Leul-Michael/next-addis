@@ -9,7 +9,7 @@ const Contact = () => {
           <h1 className="font-title font-serif font-bold leading-none">
             Let&apos;s work together.
           </h1>
-          <p className="max-w-[600px] text-xl leading-[1.2] text-clr-muted">
+          <p className="max-w-[600px] text-lg leading-[1.2] text-clr-muted lg:text-xl">
             We engage in projects of varying scales - from helping startups to
             global brands. Get in touch to see how we can help you.
           </p>

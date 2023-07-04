@@ -8,7 +8,7 @@ const Project = () => {
         <h1 className="font-subtitle font-serif font-semibold leading-none">
           Works.
         </h1>
-        <p className="text-xl leading-[1.2] text-clr-muted">
+        <p className="text-lg leading-[1.2] text-clr-muted lg:text-xl">
           We help <span className="font-medium underline">Fast Growth</span>{" "}
           Teams Scale Their Design Roadmaps At Lightning Speeds
         </p>
@@ -21,7 +21,7 @@ const Project = () => {
         <ProjectExcerpt />
         <ProjectExcerpt yellow />
       </div>
-      <div className="flex flex-col gap-8 lg:hidden lg:flex-row">
+      <div className="flex flex-col gap-16 lg:hidden lg:flex-row">
         <ProjectExcerpt />
         <ProjectExcerpt yellow />
         <ProjectExcerpt />

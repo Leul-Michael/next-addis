@@ -44,7 +44,7 @@ const Services = () => {
           <h1 className="font-subtitle font-serif font-semibold leading-none">
             Services.
           </h1>
-          <p className="text-xl leading-[1.2] text-clr-muted">
+          <p className="text-lg leading-[1.2] text-clr-muted lg:text-xl">
             We unite design, technology and the brightest ideas to deliver
             sustainable, sharp,{" "}
             <span className="font-medium underline">aesthetic</span> and{" "}
@@ -70,7 +70,7 @@ const Services = () => {
           <h1 className="font-subtitle font-serif font-semibold leading-none">
             Services.
           </h1>
-          <p className="text-xl leading-[1.2] text-clr-muted">
+          <p className="text-lg leading-[1.2] text-clr-muted lg:text-xl">
             We unite design, technology and the brightest ideas to deliver
             sustainable, sharp,{" "}
             <span className="font-medium underline">aesthetic</span> and{" "}

@@ -28,13 +28,13 @@ const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
       <div
         className={`custom-transition flex h-auto w-full flex-col justify-end gap-2 ${
           yellow ? "bg-clr-yellow" : "bg-clr-purple"
-        } p-6 duration-[600ms] group-hover:top-0 lg:absolute lg:left-0 lg:top-[100%] lg:h-full lg:bg-transparent`}
+        } px-6 py-8 duration-[600ms] group-hover:top-0 lg:absolute lg:left-0 lg:top-[100%] lg:h-full lg:bg-transparent`}
       >
         <h1 className="font-subtitle hero-text-dark w-full font-serif font-bold leading-none sm:w-[60%]">
           Digital Innovation.
         </h1>
         <div className="custom-transition flex flex-col gap-4 duration-[600ms] lg:max-w-[60%] lg:opacity-0 lg:group-hover:opacity-100">
-          <p className="hero-text-dark text-lg leading-[1.2]">
+          <p className="hero-text-dark text-base leading-[1.2] lg:text-lg">
             We help <span className="font-medium underline">Fast Growth</span>{" "}
             Teams Scale Their Design Roadmaps At Lightning Speeds
           </p>

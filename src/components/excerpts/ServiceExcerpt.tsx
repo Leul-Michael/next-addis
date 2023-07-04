@@ -24,7 +24,7 @@ const ServiceExcerpt = ({ name, bg, count }: ServiceExcerptProps) => {
             <h1 className="font-subtitle hero-text-dark max-w-[400px] font-serif font-semibold leading-none">
               {name}
             </h1>
-            <p className="text-lg leading-[1.2] text-clr-dark-green">
+            <p className="text-base leading-[1.2] text-clr-dark-green lg:text-lg">
               We help <span className="font-medium underline">Fast Growth</span>{" "}
               Teams Scale Their Design Roadmaps At Lightning Speeds
             </p>

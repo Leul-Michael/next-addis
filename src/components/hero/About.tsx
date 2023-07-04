@@ -10,7 +10,7 @@ const About = () => {
           Transforming brands for growth
         </p>
         <div className="flex flex-col gap-14">
-          <p className="max-w-[650px] text-4xl leading-[1.2] text-clr-muted">
+          <p className="max-w-[650px] text-2xl leading-[1.2] text-clr-muted lg:text-4xl">
             We are a{" "}
             <span className="font-medium underline">creative agency</span>{" "}
             working with brands - building insightful strategy, creating unique
