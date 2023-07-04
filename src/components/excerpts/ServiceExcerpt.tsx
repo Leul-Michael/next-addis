@@ -11,10 +11,10 @@ const ServiceExcerpt = ({ name, bg, count }: ServiceExcerptProps) => {
   return (
     <article
       id="step-wrapper"
-      className={`flex h-screen min-h-[400px] flex-col justify-center overflow-hidden`}
+      className={`flex h-full min-h-[400px] flex-col items-center justify-center overflow-hidden`}
     >
       <div
-        className={`flex h-full max-h-[700px] w-full flex-col gap-2 ${bg} rounded-[14px] p-12`}
+        className={`flex h-[90%] max-h-[700px] w-full flex-col gap-2 ${bg} rounded-[14px] p-12`}
       >
         <div className="grid h-full min-h-[500px] w-full grid-cols-2">
           <div className="flex max-w-[500px] flex-col gap-8">

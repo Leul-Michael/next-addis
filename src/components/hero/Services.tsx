@@ -20,13 +20,13 @@ const Services = () => {
           scrollTrigger: {
             trigger: step,
             pin: true,
-            start: "top 5%",
+            start: "top top",
             end: () =>
               steps.length === index + 1
                 ? `${step?.offsetHight}`
                 : `bottom -${(steps.length - (index + 2)) * 100}%`,
             pinSpacing: false,
-            anticipatePin: 0.5,
+            anticipatePin: 1,
           },
         })
       })
