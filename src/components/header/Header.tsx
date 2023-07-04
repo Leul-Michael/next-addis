@@ -12,9 +12,9 @@ const Header = () => {
     <>
       <Menu />
       <header
-        className={`custom-transition sticky left-0 top-[1rem] z-[100] flex h-[4rem] overflow-hidden duration-300 ${
+        className={`custom-transition sticky left-0 top-0 z-[100] flex h-[4rem] overflow-hidden duration-300 ${
           isScrolled
-            ? "mx-auto w-[95%] rounded-[8px] bg-clr-main/20 text-clr-font backdrop-blur-[100px]"
+            ? "mx-auto bg-clr-main/20 text-clr-font backdrop-blur-[100px]"
             : "header h-[5rem] w-full bg-transparent"
         } ${
           showMenu || isInServiceSection
@@ -23,9 +23,7 @@ const Header = () => {
         }`}
       >
         <nav
-          className={`custom-transition mx-auto flex w-full max-w-screen-2xl items-center justify-between duration-300 ${
-            isScrolled ? "px-5 md:px-10" : "px-5 md:px-20"
-          }`}
+          className={`custom-transition mx-auto flex w-full max-w-screen-2xl items-center justify-between px-5 duration-300 md:px-20`}
         >
           <div className="flex items-center gap-7">
             <Link href="/">

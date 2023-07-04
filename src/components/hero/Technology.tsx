@@ -68,8 +68,8 @@ const Technology = () => {
                     tabIndex={0}
                     onClick={() => setTab(t)}
                     className={`${
-                      tab.id === t.id ? "tab-active" : ""
-                    } cursor-pointer overflow-hidden whitespace-nowrap rounded-[6px] border border-clr-border px-5 py-[0.4rem]`}
+                      tab.id === t.id ? "bg-clr-accent text-white" : ""
+                    } cursor-pointer whitespace-nowrap rounded-[6px] border border-clr-border px-5 py-[0.4rem]`}
                   >
                     {t.name}
                   </span>

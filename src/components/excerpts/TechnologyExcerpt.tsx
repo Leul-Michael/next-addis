@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 type TechnologyExcerptProps = {
   name: string
@@ -7,7 +8,11 @@ type TechnologyExcerptProps = {
 
 const TechnologyExcerpt = ({ name, image }: TechnologyExcerptProps) => {
   return (
-    <article
+    <motion.article
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.5 }}
       className={`flex h-full max-w-[500px] flex-col items-center justify-center gap-8 overflow-hidden
         rounded-[6px] bg-clr-border/30 px-5 pb-3 pt-5 lg:py-3`}
     >
@@ -23,7 +28,7 @@ const TechnologyExcerpt = ({ name, image }: TechnologyExcerptProps) => {
           className="absolute left-0 top-0 h-full w-full object-cover"
         />
       </div>
-    </article>
+    </motion.article>
   )
 }
 

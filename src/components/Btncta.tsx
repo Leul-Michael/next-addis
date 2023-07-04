@@ -17,7 +17,7 @@ const Btncta = ({ to = "/", name, className = "" }: BtnctaProps) => {
       <span>{name}</span>
       <BsArrowRightCircleFill
         size={22}
-        className="duration-300 group-hover:-rotate-45 group-hover:text-black"
+        className="duration-300 group-hover:-rotate-45"
       />
     </Link>
   )

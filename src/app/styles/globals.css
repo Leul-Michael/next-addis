@@ -130,7 +130,7 @@ html.lenis {
   border: 1px solid hsl(214.3 31.8% 91.4%);
 }
 
-.btn-cta::before {
+/* .btn-cta::before {
   position: absolute;
   content: '';
   top: 0;
@@ -145,13 +145,13 @@ html.lenis {
 
 .btn-cta:hover::before {
   opacity: 1;
-}
+} */
 
-.btn-cta.btn-cta-outline:hover {
+/* .btn-cta.btn-cta-outline:hover {
   color: white;
-}
+} */
 
-.tab-active {
+/* .tab-active {
   position: relative;
   color: white;
 }
@@ -166,7 +166,7 @@ html.lenis {
   z-index: -1;
   transition: opacity 0.6s var(--transition);
   background-image: linear-gradient(to top, #0DAFD9, hsl(var(--color-accent)));
-}
+} */
 
 .main-container {
   width: min(1600px, 100%);
