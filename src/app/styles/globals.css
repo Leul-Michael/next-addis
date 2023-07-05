@@ -171,7 +171,7 @@ html.lenis {
 .main-container {
   width: min(1600px, 100%);
   margin: 0 auto;
-  padding: 0 5rem;
+  padding-inline: 5rem;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -204,7 +204,7 @@ html.lenis {
 }
 
 /* Header */
-.header {
+/* .header {
   color: hsl(210, 40%, 96.1%);
 }
 
@@ -218,7 +218,7 @@ html.lenis {
 
 .header-font-clr {
   background: hsla(210, 40%, 96.1%, 0.7);
-}
+} */
 
 /* Toogle Theme */
 .header__theme-icon {
@@ -259,14 +259,14 @@ html.lenis {
   left: 4px;
   bottom: 4px;
   border-radius: 50%;
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(0, 0%, 95%);
   -webkit-transition: all 0.6s var(--transition);
   transition: all 0.6s var(--transition);
   z-index: 5;
 }
 
 .header__theme-icon input:checked+.slider {
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(0, 0%, 95%);
 }
 
 .header__theme-icon input:checked+.slider::before {
@@ -284,7 +284,7 @@ html.lenis {
   position: absolute;
   top: 5px;
   z-index: 1;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
   pointer-events: none;
 }
 
@@ -294,15 +294,16 @@ html.lenis {
 
 .header__theme-light {
   right: 5px;
+  color: hsl(0, 0%, 100%);
 }
 
 /* Hero */
 .hero {
   min-height: calc(100vh - var(--header-height));
-  color: hsl(210, 40%, 96.1%);
   overflow: hidden;
 }
 
+/* 
 
 .hero::before {
   content: '';
@@ -316,7 +317,7 @@ html.lenis {
   height: 100svh;
   background: linear-gradient(to top, hsla(0, 0%, 0%, 0.35) 5%, hsla(0, 0%, 0%, 0));
   z-index: -1;
-}
+} */
 
 .hero-text {
   color: hsl(0, 0%, 83%);
@@ -342,7 +343,7 @@ html.lenis {
 
 @media (max-width: 768px) {
   .main-container {
-    padding: 0 2rem;
+    padding-inline: 2rem;
   }
 
   /* General styles */

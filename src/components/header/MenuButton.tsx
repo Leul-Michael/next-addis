@@ -6,7 +6,7 @@ import { BsMoonFill, BsSunFill } from "react-icons/bs"
 
 const MenuButton = () => {
   const { theme, setTheme } = useTheme()
-  const { setShowMenu, isScrolled } = useGlobals()
+  const { setShowMenu } = useGlobals()
 
   return (
     <div className="relative flex w-28 overflow-hidden lg:w-36">
@@ -25,16 +25,8 @@ const MenuButton = () => {
         onClick={() => setShowMenu((prev) => !prev)}
         className="absolute right-0 top-0 flex aspect-square h-full w-[50%] flex-col items-end justify-center gap-1 rounded-[100%] md:w-[65%] md:px-5"
       >
-        <span
-          className={`h-[2px] w-[80%] ${
-            isScrolled ? "bg-clr-font" : "header-font-clr"
-          }`}
-        ></span>
-        <span
-          className={`h-[2px] w-[60%] ${
-            isScrolled ? "bg-clr-font" : "header-font-clr"
-          }`}
-        ></span>
+        <span className={`h-[2px] w-[80%] bg-clr-font`}></span>
+        <span className={`h-[2px] w-[60%] bg-clr-font`}></span>
       </button>
     </div>
   )

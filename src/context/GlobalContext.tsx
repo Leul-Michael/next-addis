@@ -57,7 +57,7 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
     ({ scroll, limit, velocity, direction, progress }: Lenis) => {
       // console.log(progress)
       setIsInServiceSection(
-        window?.innerWidth > 1024 ? progress > 0.32 && progress < 0.57 : false
+        window?.innerWidth > 1024 ? progress > 0.14 && progress < 0.4 : false
       )
       setIsScrolled(progress > 0.008)
     }

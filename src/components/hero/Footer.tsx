@@ -13,11 +13,10 @@ const Footer = () => {
         <div className="flex w-[40%] items-center gap-7">
           <Link href="/">
             <h1 className="relative flex items-baseline">
-              <span className="absolute left-[1.45rem] top-0 text-[0.5rem]">
-                digital agency
+              <span className="font-serif text-[1.5rem] font-black md:text-[1.75rem]">
+                Next
               </span>
-              <span className="font-serif text-[1.75rem] font-black">Next</span>
-              <span className="font-serif text-[1.45rem] font-semibold uppercase">
+              <span className="font-serif text-[1.25rem] font-semibold uppercase md:text-[1.45rem]">
                 Addis.
               </span>
             </h1>

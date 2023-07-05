@@ -15,7 +15,7 @@ const Header = () => {
         className={`custom-transition sticky left-0 top-0 z-[100] flex h-[4rem] overflow-hidden duration-300 ${
           isScrolled
             ? "mx-auto bg-clr-main/20 text-clr-font backdrop-blur-[100px]"
-            : "header h-[5rem] w-full bg-transparent"
+            : "header h-[4.5rem] w-full border-b border-clr-border bg-transparent"
         } ${
           showMenu || isInServiceSection
             ? "-translate-y-[135%]"
@@ -28,9 +28,6 @@ const Header = () => {
           <div className="flex items-center gap-7">
             <Link href="/">
               <h1 className="relative flex items-baseline">
-                <span className="absolute left-[1.45rem] top-0 text-[0.5rem]">
-                  digital agency
-                </span>
                 <span className="font-serif text-[1.5rem] font-black md:text-[1.75rem]">
                   Next
                 </span>

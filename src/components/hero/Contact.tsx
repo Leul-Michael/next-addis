@@ -44,7 +44,7 @@ const Contact = () => {
                 className="h-[150px] w-full max-w-[500px] resize-y rounded-[6px] border border-clr-border bg-transparent p-4 outline-none focus:border-clr-accent"
               />
             </div>
-            <Btncta className="btn-cta-outline" to="/" name="Send Message" />
+            <Btncta to="/" name="Send Message" />
           </form>
         </div>
       </section>
