@@ -9,8 +9,9 @@ const Pricing = () => {
           Customize a plan that fits your need.
         </h1>
         <p className="hero-text-dark text-lg leading-[1.2] text-clr-font">
-          We help <span className="font-medium underline">Fast Growth</span>{" "}
-          Teams Scale Their Design Roadmaps At Lightning Speeds
+          Get to The{" "}
+          <span className="font-medium underline">Price of Your Liking</span> By
+          Customizing Based on Languages Used, Number of Pages and So on!
         </p>
         <Btncta className="self-center" to="/" name="Customize Pricing" />
       </div>
