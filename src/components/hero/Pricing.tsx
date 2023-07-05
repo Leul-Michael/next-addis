@@ -3,7 +3,7 @@ import Btncta from "../Btncta"
 
 const Pricing = () => {
   return (
-    <section className="mb-28 mt-16 flex flex-col gap-16 rounded-[14px] bg-clr-purple px-8 py-12 lg:p-12">
+    <section className="my-20 flex flex-col gap-16 rounded-[14px] bg-clr-purple px-8 py-12 lg:p-12">
       <div className="mx-auto flex max-w-[600px] flex-col items-center justify-center gap-8 bg-clr-purple text-center">
         <h1 className="font-subtitle hero-text-dark font-serif font-semibold leading-none">
           Customize a plan that fits your need.

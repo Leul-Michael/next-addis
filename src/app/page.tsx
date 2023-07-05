@@ -51,6 +51,8 @@ export default function Home() {
         <Testimonials />
         {/* Pricing Section */}
         <Pricing />
+        {/* Blog Section */}
+        <Blog />
       </div>
       <ParallaxText baseVelocity={5} clone={6}>
         Next Addis
@@ -58,8 +60,6 @@ export default function Home() {
       <ParallaxText baseVelocity={-5}>Let&apos;s work together</ParallaxText>
       {/* Contact section */}
       <Contact />
-      {/* Blog Section */}
-      <Blog />
       {/* Footer Section */}
       <Footer />
     </>

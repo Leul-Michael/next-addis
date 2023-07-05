@@ -16,7 +16,7 @@ const MenuButton = () => {
         title="Toggle Theme"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        <input tabIndex={-1} type="checkbox" />
+        <input tabIndex={-1} type="checkbox" checked={theme === "dark"} />
         <span className="slider"></span>
         <BsMoonFill className="header__theme-light" />
         <BsSunFill className="header__theme-dark" />
