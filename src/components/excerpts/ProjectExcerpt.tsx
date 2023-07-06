@@ -7,7 +7,7 @@ type ProjectExcerptProps = {
 
 const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
   return (
-    <article className="custom-transition group relative flex h-[550px] w-full flex-col justify-end overflow-hidden rounded-[14px] duration-[600ms] lg:hover:w-[150%]">
+    <article className="custom-transition group relative flex h-[550px] w-full flex-col justify-end overflow-hidden rounded-[8px] duration-[600ms] lg:rounded-[14px] lg:hover:w-[150%]">
       <Image
         src="/project.jpg"
         alt="project image"
@@ -16,7 +16,7 @@ const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
         className="absolute left-0 top-0 -z-[2] h-[50%] w-full bg-gray-800/40 object-cover lg:h-full"
       />
       <span
-        className={`custom-transition absolute left-0 top-[100%] -z-[1] h-full w-full rounded-[14px] ${
+        className={`custom-transition absolute left-0 top-[100%] -z-[1] h-full w-full rounded-[8px] lg:rounded-[14px] ${
           yellow ? "bg-clr-yellow" : "bg-clr-purple"
         } duration-[600ms] group-hover:top-0`}
       ></span>
@@ -38,7 +38,7 @@ const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
             We help <span className="font-medium underline">Fast Growth</span>{" "}
             Teams Scale Their Design Roadmaps At Lightning Speeds
           </p>
-          <Btncta name="View Showcase" to="/" />
+          <Btncta name="View Showcase" to="/work/lools" />
         </div>
       </div>
     </article>

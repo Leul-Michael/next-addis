@@ -25,18 +25,32 @@ export default function Home() {
         <source src="/video/hero.mp4" type="video/mp4" />
       </video> */}
       <div className="main-container flex flex-col rounded-[0px_0px_50px_50px]">
-        <section className="hero flex flex-col items-start justify-end pb-32 md:justify-center md:py-16">
-          <div className="flex w-full max-w-[650px] flex-col gap-8">
-            <h1 className="font-title font-serif font-bold leading-none">
-              Digital Innovation You Need to Build, Scale & Grow.
-            </h1>
-            <p className="text-xl leading-[1.2] text-clr-muted">
-              We help <span className="font-medium underline">Fast Growth</span>{" "}
-              Teams Scale Their Design Roadmaps At Lightning Speeds
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Btncta name="Get a Quote" to="/" />
+        <section className="hero flex flex-col items-start justify-end pb-20 md:justify-center md:py-16">
+          <div className="flex w-full flex-col gap-20">
+            <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-end">
+              <h1 className="font-title max-w-[600px] font-serif font-bold leading-none">
+                Digital Innovation You Need to Build, Scale & Grow.
+              </h1>
+              <div className="flex max-w-[400px] flex-col gap-8">
+                <p className="text-xl leading-[1.2] text-clr-muted">
+                  We help{" "}
+                  <span className="font-medium underline">Fast Growth</span>{" "}
+                  Teams Scale Their Design Roadmaps At Lightning Speeds
+                </p>
+                <div className="flex flex-wrap items-center gap-4">
+                  <Btncta name="Get a Quote" to="/" />
+                </div>
+              </div>
             </div>
+            <video
+              className="h-full min-h-[300px] w-full overflow-hidden rounded-[14px] bg-clr-border/20 object-cover md:min-h-[600px] lg:rounded-[40px]"
+              playsInline
+              autoPlay
+              loop
+              muted
+            >
+              <source src="/video/agency.mp4" type="video/mp4" />
+            </video>
           </div>
         </section>
         {/* About section */}

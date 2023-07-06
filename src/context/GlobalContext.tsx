@@ -11,6 +11,7 @@ import {
   useState,
 } from "react"
 import Lenis from "@studio-freight/lenis"
+import { usePathname } from "next/navigation"
 
 type GlobalContextType = {
   lenis: Lenis | null
@@ -27,6 +28,7 @@ export default function useGlobals() {
 }
 
 export function GlobalContextProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
   const [lenis, setLenis] = useState<Lenis | null>(null)
   const [isInServiceSection, setIsInServiceSection] = useState(false)
@@ -57,7 +59,9 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
     ({ scroll, limit, velocity, direction, progress }: Lenis) => {
       // console.log(progress)
       setIsInServiceSection(
-        window?.innerWidth > 1024 ? progress > 0.14 && progress < 0.4 : false
+        window?.innerWidth > 1024 && pathname === "/"
+          ? progress > 0.14 && progress < 0.4
+          : false
       )
       setIsScrolled(progress > 0.008)
     }
