@@ -3,7 +3,6 @@ import ParallaxText from "@/components/ParallaxText"
 import About from "@/components/hero/About"
 import Blog from "@/components/hero/Blog"
 import Contact from "@/components/hero/Contact"
-import Footer from "@/components/hero/Footer"
 import Pricing from "@/components/hero/Pricing"
 import Project from "@/components/hero/Project"
 import Services from "@/components/hero/Services"
@@ -25,7 +24,7 @@ export default function Home() {
         <source src="/video/hero.mp4" type="video/mp4" />
       </video> */}
       <div className="main-container flex flex-col rounded-[0px_0px_50px_50px]">
-        <section className="hero flex flex-col items-start justify-end pb-20 pt-32 md:justify-center md:py-16">
+        <section className="hero flex flex-col items-start justify-end pb-20 pt-40 md:justify-center md:py-16">
           <div className="flex w-full flex-col gap-20">
             <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-end">
               <h1 className="font-title max-w-[600px] font-serif font-bold leading-none">
@@ -74,8 +73,6 @@ export default function Home() {
       <ParallaxText baseVelocity={-5}>Let&apos;s work together</ParallaxText>
       {/* Contact section */}
       <Contact />
-      {/* Footer Section */}
-      <Footer />
     </>
   )
 }

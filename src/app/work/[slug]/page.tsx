@@ -2,6 +2,7 @@
 
 import Btncta from "@/components/Btncta"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import React from "react"
 // https://serieseight.com/work/viatu
@@ -53,11 +54,11 @@ export default function Page() {
           </h1>
           <div className="relative max-h-[700px] min-h-[40vh] w-full overflow-hidden rounded-[14px] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[650px]">
             <Image
-              src="/pro-detail.jpg"
+              src="/product-1.jpg"
               alt="project image"
               fill
               sizes="(max-width: 0px) 100vw"
-              className="absolute left-0 top-0 -z-[2] h-full w-full bg-gray-800/40 object-cover"
+              className="absolute left-0 top-0 h-full w-full bg-gray-800/40 object-cover"
             />
           </div>
           <div className="flex w-full flex-col gap-8 border-t-2 border-clr-border py-20 md:flex-row md:gap-20">
@@ -110,13 +111,13 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <div className="relative max-h-[700px] min-h-[40vh] w-full overflow-hidden sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[650px]">
+      <div className="relative  min-h-[40vh] w-full overflow-hidden sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[700px]">
         <Image
-          src="/pro-detail.jpg"
+          src="/product-1.jpg"
           alt="project image"
           fill
           sizes="(max-width: 0px) 100vw"
-          className="absolute left-0 top-0 -z-[2] h-full w-full bg-gray-800/40 object-cover"
+          className="absolute left-0 top-0 h-full w-full bg-gray-800/40 object-cover"
         />
       </div>
       <section className="main-container relative flex h-full flex-col">
@@ -135,9 +136,20 @@ export default function Page() {
               collaboration with them and am so happy with the result.
             </p>
           </div>
+        </div>
+        <video
+          className="h-full min-h-[300px] w-full overflow-hidden rounded-[14px] bg-clr-border/20 object-cover md:min-h-[600px]"
+          playsInline
+          autoPlay
+          loop
+          muted
+        >
+          <source src="/video/agency.mp4" type="video/mp4" />
+        </video>
+        <div className="flex flex-col items-center justify-center gap-16 py-20">
           <div className="flex max-w-[600px] flex-col gap-5">
             <p className="font-subtitle max-w-[800px] font-serif font-medium leading-none">
-              Approach
+              Solution
             </p>
             <p className="text-lg leading-[1] lg:text-xl">
               It was struggling to gain market share due to consumer perception
@@ -150,15 +162,37 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <video
-          className="h-full min-h-[300px] w-full overflow-hidden rounded-[14px] bg-clr-border/20 object-cover md:min-h-[600px] lg:rounded-[40px]"
-          playsInline
-          autoPlay
-          loop
-          muted
+      </section>
+      <section className="main-container auto-h flex h-full items-center justify-center bg-clr-border/30">
+        <div className="relative my-28 max-h-[700px] min-h-[40vh] w-full overflow-hidden rounded-[14px] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[650px]">
+          <Image
+            src="/product-1.jpg"
+            alt="project image"
+            fill
+            sizes="(max-width: 0px) 100vw"
+            className="h-full w-full bg-gray-800/40 object-cover"
+          />
+        </div>
+      </section>
+      <section className="mx-auto flex h-full max-w-screen-md flex-col items-center justify-center px-16 py-20 pb-32 md:px-0">
+        <Link
+          href="/"
+          className="group relative flex min-h-[300px] w-full flex-col items-center justify-center gap-16 overflow-hidden border-b border-clr-border text-center"
         >
-          <source src="/video/agency.mp4" type="video/mp4" />
-        </video>
+          <p className="max-w-[600px] text-lg leading-[1.2] text-clr-muted">
+            Next Case.
+          </p>
+          <h1 className="custom-transition font-title max-w-[800px] font-serif font-semibold leading-none duration-500 group-hover:opacity-60">
+            GhostHunters
+          </h1>
+          <Image
+            src="/product-1.jpg"
+            alt="project image"
+            width={200}
+            height={200}
+            className="custom-transition absolute bottom-0 left-[50%] -translate-x-[50%] translate-y-[50%] rounded-[8px_8px_0px_0px] bg-gray-800/40 object-cover duration-500 group-hover:translate-y-[0%]"
+          />
+        </Link>
       </section>
     </>
   )

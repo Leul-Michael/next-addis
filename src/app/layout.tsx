@@ -3,6 +3,7 @@ import "./styles/globals.css"
 import ThemeProvider from "@/components/ThemeProvider"
 import { GlobalContextProvider } from "@/context/GlobalContext"
 import FramerProvider from "@/components/FramerProvider"
+import Footer from "@/components/hero/Footer"
 
 export const metadata = {
   title: "Create Next App",
@@ -20,8 +21,11 @@ export default function RootLayout({
         <FramerProvider>
           <ThemeProvider>
             <GlobalContextProvider>
+              {/* Header Section */}
               <Header />
               <main>{children}</main>
+              {/* Footer Section */}
+              <Footer />
             </GlobalContextProvider>
           </ThemeProvider>
         </FramerProvider>
