@@ -60,7 +60,7 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
       // console.log(progress)
       setIsInServiceSection(
         window?.innerWidth > 1024 && pathname === "/"
-          ? progress > 0.14 && progress < 0.4
+          ? progress > 0.17 && progress < 0.4
           : false
       )
       setIsScrolled(progress > 0.008)

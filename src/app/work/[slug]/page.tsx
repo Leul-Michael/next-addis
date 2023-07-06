@@ -70,11 +70,8 @@ export default function Page() {
                 <p className="text-xs font-semibold text-clr-muted">Context:</p>
                 <p>Branding</p>
                 <p>Developement</p>
-              </div>
-
-              <div className="flex flex-col text-sm leading-[1.2]">
-                <p className="text-xs font-semibold text-clr-muted">Context:</p>
-                <p>Web frontend CMS</p>
+                <p>Web frontend</p>
+                <p>CMS</p>
               </div>
               <div className="flex flex-col text-sm leading-[1.2]">
                 <p className="text-xs font-semibold text-clr-muted">Tools:</p>

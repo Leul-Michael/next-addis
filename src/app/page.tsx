@@ -25,7 +25,7 @@ export default function Home() {
         <source src="/video/hero.mp4" type="video/mp4" />
       </video> */}
       <div className="main-container flex flex-col rounded-[0px_0px_50px_50px]">
-        <section className="hero flex flex-col items-start justify-end py-20 md:justify-center md:py-16">
+        <section className="hero flex flex-col items-start justify-end pb-20 pt-32 md:justify-center md:py-16">
           <div className="flex w-full flex-col gap-20">
             <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-end">
               <h1 className="font-title max-w-[600px] font-serif font-bold leading-none">
