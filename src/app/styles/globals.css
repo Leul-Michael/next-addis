@@ -300,6 +300,7 @@ html.lenis {
 /* Hero */
 .hero {
   min-height: calc(100vh - var(--header-height));
+  height: 100%;
   overflow: hidden;
 }
 
