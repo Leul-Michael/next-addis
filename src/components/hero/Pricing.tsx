@@ -13,7 +13,11 @@ const Pricing = () => {
           <span className="font-medium underline">Price of Your Liking</span> By
           Customizing Based on Languages Used, Number of Pages and So on!
         </p>
-        <Btncta className="self-center" to="/" name="Customize Pricing" />
+        <Btncta
+          className="self-center"
+          to="/pricing"
+          name="Customize Pricing"
+        />
       </div>
     </section>
   )

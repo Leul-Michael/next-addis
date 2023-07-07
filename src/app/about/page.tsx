@@ -5,6 +5,7 @@ import Slider from "@/components/slider/Slider"
 import Image from "next/image"
 import { BsArrowDown } from "react-icons/bs"
 import ContactExcerpt from "@/components/excerpts/ContactExcerpt"
+import values from "@/data/values.json"
 
 const Page = () => {
   return (
@@ -15,9 +16,9 @@ const Page = () => {
           <h1 className="font-title max-w-[900px] font-serif font-semibold leading-none">
             Collaborate for Better
           </h1>
-          <h1 className="font-subtitle max-w-[900px] font-serif font-semibold leading-none">
+          <h2 className="font-subtitle max-w-[900px] font-serif font-semibold leading-none">
             With us
-          </h1>
+          </h2>
         </div>
         <div className="flex w-full flex-col gap-20 border-t-2 border-clr-border pb-20 pt-28">
           <h2 className="max-w-[800px] text-2xl capitalize leading-[1.2] lg:text-4xl">
@@ -63,11 +64,14 @@ const Page = () => {
             Our Values
           </h1>
           <div className="flex flex-col">
-            <Values count={1} title="Stay balanced" />
-            <Values count={2} title="Own Your Work" />
-            <Values count={3} title="Be the teammate you want" />
-            <Values count={4} title="Results matter" />
-            <Values count={5} title="Build to last" />
+            {values.map((value, index) => (
+              <Values
+                key={index}
+                count={index}
+                title={value.title}
+                desc={value.desc}
+              />
+            ))}
           </div>
         </div>
         <div className="flex flex-col gap-8">
@@ -91,7 +95,7 @@ const Values = ({
 }: {
   count: number
   title: string
-  desc?: string
+  desc: string
 }) => {
   const [show, setShow] = useState(false)
 
@@ -101,7 +105,7 @@ const Values = ({
         tabIndex={1}
         onBlur={() => setShow(false)}
         onClick={() => setShow((prev) => !prev)}
-        className="group relative flex cursor-pointer items-center justify-between px-4 py-5"
+        className="group relative flex cursor-pointer items-center justify-between px-2 py-5 md:px-4"
       >
         <span className="custom-transition absolute bottom-0 left-0 -z-[1] h-0 w-full bg-clr-purple duration-300 group-hover:h-full"></span>
         <p className="hidden max-w-[400px] text-2xl capitalize leading-[1.2] group-hover:text-[#151515] sm:flex lg:text-[1.8rem]">
@@ -123,9 +127,7 @@ const Values = ({
         } text-center `}
       >
         <p className="overflow-hidden text-base capitalize leading-[1.2] lg:text-lg">
-          We are a working with brands - building insightful strategy, creating
-          unique designs and crafting experiences that bring positive change and
-          value.
+          {desc}
         </p>
       </div>
     </div>

@@ -24,7 +24,7 @@ const Page = () => {
           <BlogExcerpt />
         </div>
       </div>
-      <ContactExcerpt className="mb-32 mt-4" />
+      <ContactExcerpt className="mb-28 mt-0" />
     </section>
   )
 }

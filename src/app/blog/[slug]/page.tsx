@@ -141,7 +141,7 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <Blog related />
+        <Blog related className="py-14" />
       </div>
     </section>
   )

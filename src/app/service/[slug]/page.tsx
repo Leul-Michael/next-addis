@@ -54,7 +54,7 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <ContactExcerpt className="mb-8 mt-12" />
+        <ContactExcerpt className="mb-0 mt-12" />
       </section>
     </>
   )
