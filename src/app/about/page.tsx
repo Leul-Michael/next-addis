@@ -77,7 +77,7 @@ const Page = () => {
           <Slider />
         </div>
       </div>
-      <ContactExcerpt />
+      <ContactExcerpt className="mb-28" />
     </section>
   )
 }
