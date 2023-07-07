@@ -4,6 +4,7 @@ import ThemeProvider from "@/components/ThemeProvider"
 import { GlobalContextProvider } from "@/context/GlobalContext"
 import FramerProvider from "@/components/FramerProvider"
 import Footer from "@/components/hero/Footer"
+import Script from "next/script"
 
 export const metadata = {
   title: "Create Next App",
@@ -24,12 +25,18 @@ export default function RootLayout({
               {/* Header Section */}
               <Header />
               <main>{children}</main>
+              <div className="elfsight-app-4fa86fda-b13f-424f-8d51-4b9af9137edc"></div>
               {/* Footer Section */}
               <Footer />
             </GlobalContextProvider>
           </ThemeProvider>
         </FramerProvider>
       </body>
+      <Script
+        src="https://static.elfsight.com/platform/platform.js"
+        data-use-service-core
+        defer
+      ></Script>
     </html>
   )
 }

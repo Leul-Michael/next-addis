@@ -4,8 +4,7 @@
 
 import React, { useMemo, useState } from "react"
 import TechnologyExcerpt from "../excerpts/TechnologyExcerpt"
-
-type TabType = { id: number; name: string }
+import { TabType } from "../../../types"
 
 const tabs = [
   { id: 0, name: "All" },

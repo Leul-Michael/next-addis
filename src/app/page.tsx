@@ -12,17 +12,6 @@ import Testimonials from "@/components/hero/Testimonials"
 export default function Home() {
   return (
     <>
-      {/* <video
-        className="hero__video"
-        width="100%"
-        height="100%"
-        playsInline
-        autoPlay
-        loop
-        muted
-      >
-        <source src="/video/hero.mp4" type="video/mp4" />
-      </video> */}
       <div className="main-container flex flex-col rounded-[0px_0px_50px_50px]">
         <section className="hero flex flex-col items-start justify-end pb-20 pt-40 md:justify-center md:py-16">
           <div className="flex w-full flex-col gap-20">
@@ -37,7 +26,7 @@ export default function Home() {
                   Teams Scale Their Design Roadmaps At Lightning Speeds
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
-                  <Btncta name="Get a Quote" to="/" />
+                  <Btncta name="Get a Quote" to="/contact" />
                 </div>
               </div>
             </div>

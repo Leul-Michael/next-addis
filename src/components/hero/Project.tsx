@@ -1,5 +1,6 @@
 import React from "react"
 import ProjectExcerpt from "../excerpts/ProjectExcerpt"
+import Btncta from "../Btncta"
 
 const Project = () => {
   return (
@@ -27,6 +28,7 @@ const Project = () => {
         <ProjectExcerpt />
         <ProjectExcerpt yellow />
       </div>
+      <Btncta className="btn-cta-outline" to="/work" name="All Works" />
     </section>
   )
 }

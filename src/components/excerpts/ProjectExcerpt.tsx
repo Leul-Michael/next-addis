@@ -3,11 +3,16 @@ import Btncta from "../Btncta"
 
 type ProjectExcerptProps = {
   yellow?: Boolean
+  nohover?: Boolean
 }
 
-const ProjectExcerpt = ({ yellow }: ProjectExcerptProps) => {
+const ProjectExcerpt = ({ yellow, nohover }: ProjectExcerptProps) => {
   return (
-    <article className="custom-transition group relative flex h-[550px] w-full flex-col justify-end overflow-hidden rounded-[8px] duration-[600ms] lg:rounded-[14px] lg:hover:w-[150%]">
+    <article
+      className={`custom-transition group relative flex h-[550px] w-full flex-col justify-end overflow-hidden rounded-[8px] duration-[600ms] lg:rounded-[14px] ${
+        !nohover ? "lg:hover:w-[150%]" : ""
+      }`}
+    >
       <Image
         src="/project.jpg"
         alt="project image"

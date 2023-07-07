@@ -16,7 +16,7 @@ const Testimonials = () => {
         </div>
         <Btncta
           className="btn-cta-outline mt-8"
-          to="/"
+          to="/testimonial"
           name="View Testimonials"
         />
       </div>

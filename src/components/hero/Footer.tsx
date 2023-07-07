@@ -31,19 +31,22 @@ const Footer = () => {
               <Link href="/" className="text-sm text-clr-muted">
                 Home
               </Link>
-              <Link href="/" className="text-sm text-clr-muted">
+              <Link href="/about" className="text-sm text-clr-muted">
                 About
               </Link>
-              <Link href="/" className="text-sm text-clr-muted">
-                Projects
+              <Link href="/work" className="text-sm text-clr-muted">
+                Works
               </Link>
               <Link href="/" className="text-sm text-clr-muted">
                 Methods
               </Link>
-              <Link href="/" className="text-sm text-clr-muted">
+              <Link href="/testimonial" className="text-sm text-clr-muted">
+                Testimonials
+              </Link>
+              <Link href="/blog" className="text-sm text-clr-muted">
                 Blog
               </Link>
-              <Link href="/" className="text-sm text-clr-muted">
+              <Link href="/contact" className="text-sm text-clr-muted">
                 Contact
               </Link>
             </div>

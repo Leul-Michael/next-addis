@@ -29,7 +29,7 @@ const ServiceExcerpt = ({ name, bg, count }: ServiceExcerptProps) => {
               Teams Scale Their Design Roadmaps At Lightning Speeds
             </p>
             <div className="mt-auto flex">
-              <Btncta name="Learn More" to="/" />
+              <Btncta name="Learn More" to="/service/lools" />
             </div>
           </div>
           <div className="relative h-full w-full overflow-hidden rounded-[12px]">

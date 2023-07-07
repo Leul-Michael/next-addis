@@ -63,35 +63,45 @@ export default function Page() {
           </div>
           <div className="flex w-full flex-col gap-8 border-t-2 border-clr-border py-20 md:flex-row md:gap-20">
             <div className="flex w-1/3 flex-col items-start gap-2">
-              <div className="flex flex-col text-sm leading-[1.2]">
-                <p className="text-xs font-semibold text-clr-muted">Client:</p>
+              <div className="flex flex-col text-lg leading-[1.2]">
+                <p className="text-xs font-medium uppercase text-clr-muted">
+                  Client:
+                </p>
                 <p>Gorges house</p>
               </div>
-              <div className="flex flex-col text-sm leading-[1.2]">
-                <p className="text-xs font-semibold text-clr-muted">Context:</p>
+              <div className="flex flex-col text-lg leading-[1.2]">
+                <p className="text-xs font-medium uppercase text-clr-muted">
+                  Context:
+                </p>
                 <p>Branding</p>
                 <p>Developement</p>
                 <p>Web frontend</p>
                 <p>CMS</p>
               </div>
-              <div className="flex flex-col text-sm leading-[1.2]">
-                <p className="text-xs font-semibold text-clr-muted">Tools:</p>
+              <div className="flex flex-col text-lg leading-[1.2]">
+                <p className="text-xs font-medium uppercase text-clr-muted">
+                  Tools:
+                </p>
                 <p>Figma</p>
                 <p>React</p>
               </div>
-              <div className="flex flex-col text-sm leading-[1.2]">
-                <p className="text-xs font-semibold text-clr-muted">Role:</p>
+              <div className="flex flex-col text-lg leading-[1.2]">
+                <p className="text-xs font-medium uppercase text-clr-muted">
+                  Role:
+                </p>
                 <p>UI Design</p>
                 <p>Coding</p>
               </div>
-              <div className="mt-12 flex flex-col text-sm leading-[1.2]">
-                <p className="text-xs font-semibold text-clr-muted">Year:</p>
+              <div className="mt-12 flex flex-col text-lg leading-[1.2]">
+                <p className="text-xs font-medium uppercase text-clr-muted">
+                  Year:
+                </p>
                 <p>2022</p>
               </div>
             </div>
             <div className="mx-auto flex w-full max-w-screen-lg flex-col">
               <div className="flex flex-col gap-16">
-                <p className="font-subtitle max-w-[800px] font-serif font-medium leading-none">
+                <p className="font-subtitle max-w-[800px] font-serif font-bold leading-none">
                   Gorges house, A premium liquor brand, startup invented by two
                   caring young founders.
                 </p>
@@ -123,7 +133,7 @@ export default function Page() {
       <section className="main-container relative flex h-full flex-col">
         <div className="flex flex-col items-center justify-center gap-16 py-20">
           <div className="flex max-w-[600px] flex-col gap-5">
-            <p className="font-subtitle max-w-[800px] font-serif font-medium leading-none">
+            <p className="font-subtitle max-w-[800px] font-serif font-bold leading-none">
               Problem
             </p>
             <p className="text-lg leading-[1] lg:text-xl">
@@ -148,7 +158,7 @@ export default function Page() {
         </video>
         <div className="flex flex-col items-center justify-center gap-16 py-20">
           <div className="flex max-w-[600px] flex-col gap-5">
-            <p className="font-subtitle max-w-[800px] font-serif font-medium leading-none">
+            <p className="font-subtitle max-w-[800px] font-serif font-bold leading-none">
               Solution
             </p>
             <p className="text-lg leading-[1] lg:text-xl">
@@ -174,7 +184,7 @@ export default function Page() {
           />
         </div>
       </section>
-      <section className="mx-auto flex h-full max-w-screen-md flex-col items-center justify-center px-16 py-20 pb-32 md:px-0">
+      <section className="mx-auto flex h-full max-w-screen-md flex-col items-center justify-center py-20 pb-32">
         <Link
           href="/"
           className="group relative flex min-h-[300px] w-full flex-col items-center justify-center gap-16 overflow-hidden border-b border-clr-border text-center"

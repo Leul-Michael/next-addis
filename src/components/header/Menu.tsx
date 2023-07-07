@@ -4,7 +4,6 @@ import { useRouter, usePathname } from "next/navigation"
 
 const Menu = () => {
   const router = useRouter()
-  const pathname = usePathname()
   const { showMenu, setShowMenu } = useGlobals()
 
   return (
@@ -32,63 +31,12 @@ const Menu = () => {
               <span className="flex h-[2px] w-5 bg-clr-main"></span>
               <span>Menu</span>
             </div>
-            <Link
-              href={`/`}
-              className="font-title flex items-center self-start overflow-hidden p-2 font-serif font-medium leading-none text-clr-main"
-            >
-              <div
-                className={`custom-transition flex ${
-                  pathname === "/" ? "translate-x-0" : "-translate-x-7"
-                } items-center gap-3 duration-300 hover:translate-x-0`}
-              >
-                <span className="flex aspect-square w-[16px] rounded-[100%] bg-clr-main"></span>
-                <span>Home</span>
-              </div>
-            </Link>
-            <Link
-              href={`/`}
-              className="font-title flex items-center self-start overflow-hidden p-2 font-serif font-medium leading-none text-clr-main"
-            >
-              <div
-                className={`custom-transition flex -translate-x-7 items-center gap-3 duration-300 hover:translate-x-0`}
-              >
-                <span className="flex aspect-square w-[16px] rounded-[100%] bg-clr-main"></span>
-                <span>Projects</span>
-              </div>
-            </Link>
-            <Link
-              href={`/`}
-              className="font-title flex items-center self-start overflow-hidden p-2 font-serif font-medium leading-none text-clr-main"
-            >
-              <div
-                className={`custom-transition flex -translate-x-7 items-center gap-3 duration-300 hover:translate-x-0`}
-              >
-                <span className="flex aspect-square w-[16px] rounded-[100%] bg-clr-main"></span>
-                <span>Method</span>
-              </div>
-            </Link>
-            <Link
-              href={`/`}
-              className="font-title flex items-center self-start overflow-hidden p-2 font-serif font-medium leading-none text-clr-main"
-            >
-              <div
-                className={`custom-transition flex -translate-x-7 items-center gap-3 duration-300 hover:translate-x-0`}
-              >
-                <span className="flex aspect-square w-[16px] rounded-[100%] bg-clr-main"></span>
-                <span>Blog</span>
-              </div>
-            </Link>
-            <Link
-              href={`/`}
-              className="font-title flex items-center self-start overflow-hidden p-2 font-serif font-medium leading-none text-clr-main"
-            >
-              <div
-                className={`custom-transition flex -translate-x-7 items-center gap-3 duration-300 hover:translate-x-0`}
-              >
-                <span className="flex aspect-square w-[16px] rounded-[100%] bg-clr-main"></span>
-                <span>Contact</span>
-              </div>
-            </Link>
+            <MenuLinks title="Home" link="/" />
+            <MenuLinks title="About" link="/about" />
+            <MenuLinks title="Works" link="/work" />
+            <MenuLinks title="Method" link="/method" />
+            <MenuLinks title="Blog" link="/blog" />
+            <MenuLinks title="Contact" link="/contact" />
           </div>
         </div>
       </div>
@@ -97,3 +45,25 @@ const Menu = () => {
 }
 
 export default Menu
+
+const MenuLinks = ({ title, link }: { title: string; link: string }) => {
+  const pathname = usePathname()
+  const { setShowMenu } = useGlobals()
+
+  return (
+    <Link
+      href={link}
+      onClick={() => setShowMenu(false)}
+      className="font-title flex items-center self-start overflow-hidden p-2 font-serif font-medium leading-none text-clr-main"
+    >
+      <div
+        className={`custom-transition flex ${
+          pathname === link ? "translate-x-0" : "-translate-x-7"
+        } items-center gap-3 duration-300 hover:translate-x-0`}
+      >
+        <span className="flex aspect-square w-[16px] rounded-[100%] bg-clr-main"></span>
+        <span>{title}</span>
+      </div>
+    </Link>
+  )
+}
