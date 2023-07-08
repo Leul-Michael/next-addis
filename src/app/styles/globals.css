@@ -427,3 +427,13 @@ html.lenis {
 .checkbox input:checked~.checkmark:after {
   display: block;
 }
+
+@media (max-width: 640px) {
+  .checkbox {
+    width: 100%;
+  }
+
+  .checkmark {
+    justify-self: flex-end;
+  }
+}
