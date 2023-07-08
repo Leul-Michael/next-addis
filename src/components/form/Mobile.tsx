@@ -123,7 +123,7 @@ const Mobile = ({ onShow }: { onShow: () => void }) => {
             design: !prev.design,
           }))
         }
-        label="UI/UX design"
+        label="UI / UX design"
         id="design"
       />
 
