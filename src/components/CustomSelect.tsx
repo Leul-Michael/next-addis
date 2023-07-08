@@ -82,7 +82,7 @@ const CustomSelect = ({ options, value, onChange }: CustomSelectProps) => {
         />
       </div>
       <ul
-        className={`absolute left-0 top-[110%] z-[100] h-max w-max flex-col rounded-[6px] border border-clr-border bg-clr-main py-1 ${
+        className={`absolute left-0 top-[110%] z-[100] h-max  w-max min-w-[200px]  flex-col rounded-[6px] border border-clr-border bg-clr-main py-1 ${
           isOpen ? "flex" : "hidden"
         }`}
       >
