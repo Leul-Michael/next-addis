@@ -100,13 +100,13 @@ const Values = ({
   const [show, setShow] = useState(false)
 
   return (
-    <div className="flex flex-col border-b border-clr-border">
-      <div
-        tabIndex={1}
-        onBlur={() => setShow(false)}
-        onClick={() => setShow((prev) => !prev)}
-        className="group relative flex cursor-pointer items-center justify-between px-2 py-5 md:px-4"
-      >
+    <div
+      tabIndex={0}
+      onBlur={() => setShow(false)}
+      onClick={() => setShow((prev) => !prev)}
+      className="flex flex-col border-b border-clr-border"
+    >
+      <div className="group relative flex cursor-pointer items-center justify-between px-2 py-5 md:px-4">
         <span className="custom-transition absolute bottom-0 left-0 -z-[1] h-0 w-full bg-clr-purple duration-300 group-hover:h-full"></span>
         <p className="hidden max-w-[400px] text-2xl capitalize leading-[1.2] group-hover:text-[#151515] sm:flex lg:text-[1.8rem]">
           0{count} /
