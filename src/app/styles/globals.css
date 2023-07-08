@@ -371,3 +371,59 @@ html.lenis {
     font-size: 2.25rem;
   }
 }
+
+/* Customize the label (the container) */
+.checkbox {
+  display: grid;
+  grid-template-columns: 250px auto;
+  align-items: center;
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+  font-size: 16px;
+  gap: 1.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  border-radius: 1px;
+  height: 12px;
+  width: 12px;
+  outline: 1px solid hsl(233, 84%, 34%);
+  outline-offset: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input~.checkmark {
+  outline-color: hsl(233 90% 61%);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked~.checkmark {
+  background-color: hsl(var(--color-accent));
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked~.checkmark:after {
+  display: block;
+}

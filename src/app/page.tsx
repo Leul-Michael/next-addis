@@ -4,6 +4,7 @@ import About from "@/components/hero/About"
 import Blog from "@/components/hero/Blog"
 import Contact from "@/components/hero/Contact"
 import Pricing from "@/components/hero/Pricing"
+import Process from "@/components/hero/Process"
 import Project from "@/components/hero/Project"
 import Services from "@/components/hero/Services"
 import Technology from "@/components/hero/Technology"
@@ -45,6 +46,8 @@ export default function Home() {
         <About />
         {/* Services Section */}
         <Services />
+        {/* Process Section */}
+        <Process />
         {/* Projects Section */}
         <Project />
         {/* Technology Section */}

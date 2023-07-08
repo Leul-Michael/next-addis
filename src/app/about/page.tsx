@@ -67,7 +67,7 @@ const Page = () => {
             {values.map((value, index) => (
               <Values
                 key={index}
-                count={index}
+                count={index + 1}
                 title={value.title}
                 desc={value.desc}
               />
@@ -76,7 +76,7 @@ const Page = () => {
         </div>
         <div className="flex flex-col gap-8">
           <h1 className="font-subtitle max-w-[450px] font-serif font-semibold leading-none">
-            Meat The Team.
+            Meet The Team.
           </h1>
           <Slider />
         </div>

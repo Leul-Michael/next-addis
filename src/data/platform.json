@@ -1,0 +1,14 @@
+[
+    {
+        "label" : "Android",
+        "value": 1
+    },
+    {
+        "label" : "IOS",
+        "value": 2
+    },
+    {
+        "label" : "Both",
+        "value": 3
+    }
+]

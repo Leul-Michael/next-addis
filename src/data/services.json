@@ -1,0 +1,18 @@
+[
+    {
+        "label" : "UI / UX Design",
+        "value": "design"
+    },
+    {
+        "label" : "Web developement",
+        "value": "web"
+    },
+    {
+        "label" : "Mobile App developement",
+        "value": "mobile"
+    },
+    {
+        "label" : "Software developement",
+        "value": "software"
+    }
+]
