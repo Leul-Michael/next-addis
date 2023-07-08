@@ -1,11 +1,24 @@
+import { ChangeEventHandler, useEffect, useState } from "react"
+
 type CheckboxProps = {
   label: string
   id: string
-  value?: string
-  onChange?: (v: string) => void
+  value: boolean
+  onChange: () => void
+  required?: boolean
 }
 
-const Checkbox = ({ label, id, value, onChange }: CheckboxProps) => {
+const Checkbox = ({ label, id, value, onChange, required }: CheckboxProps) => {
+  const [isChecked, setIsChecked] = useState(value)
+  const onValueChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+    e.preventDefault()
+    onChange()
+  }
+
+  useEffect(() => {
+    setIsChecked(value)
+  }, [value])
+
   return (
     <div className="flex items-center">
       <label htmlFor={id} className="checkbox">
@@ -16,6 +29,9 @@ const Checkbox = ({ label, id, value, onChange }: CheckboxProps) => {
           type="checkbox"
           name={id}
           id={id}
+          required={required}
+          checked={isChecked}
+          onChange={onValueChange}
         />
         <span className="checkmark"></span>
       </label>

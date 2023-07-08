@@ -25,6 +25,9 @@ module.exports = {
         tech: "repeat(auto-fill, minmax(120px, 1fr))",
         works: "repeat(auto-fill, minmax(450px, 1fr))",
       },
+      boxShadow: {
+        full: "0 0 0px 9999px rgba(0, 0, 0, 0.3)",
+      },
     },
   },
   plugins: [],

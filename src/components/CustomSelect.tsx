@@ -9,9 +9,10 @@ type CustomSelectProps = {
   options: SelectOption[]
   value: SelectOption | null
   onChange: (value: SelectOption | null) => void
+  err?: boolean
 }
 
-const CustomSelect = ({ options, value, onChange }: CustomSelectProps) => {
+const CustomSelect = ({ options, value, onChange, err }: CustomSelectProps) => {
   const { lenis } = useGlobals()
   const [isOpen, setIsOpen] = useState(false)
   const [hilightedIndex, setHilightedIndex] = useState(0)
@@ -72,7 +73,11 @@ const CustomSelect = ({ options, value, onChange }: CustomSelectProps) => {
       tabIndex={0}
       onBlur={() => setIsOpen(false)}
       onClick={() => setIsOpen((prev) => !prev)}
-      className="relative flex w-max min-w-[200px] rounded-[6px] border border-clr-border px-3 py-2 focus-within:border-clr-accent focus:border-clr-accent active:border-clr-accent"
+      className={`relative flex w-max min-w-[200px] rounded-[6px] border  px-3 py-2 ${
+        err && !value?.value
+          ? "border-red-600"
+          : "border-clr-border focus-within:border-clr-accent focus:border-clr-accent active:border-clr-accent"
+      } `}
     >
       <div className="flex w-full flex-wrap items-center justify-between gap-2">
         <span className="select-none">{value?.label ?? "Not selected"}</span>

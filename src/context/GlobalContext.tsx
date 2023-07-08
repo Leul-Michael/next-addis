@@ -19,6 +19,8 @@ type GlobalContextType = {
   setShowMenu: Dispatch<SetStateAction<boolean>>
   isScrolled: boolean
   isInServiceSection: boolean
+  price: number
+  setPrice: Dispatch<SetStateAction<number>>
 }
 
 const GlobalContext = createContext({} as GlobalContextType)
@@ -29,6 +31,7 @@ export default function useGlobals() {
 
 export function GlobalContextProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname()
+  const [price, setPrice] = useState(500)
   const [showMenu, setShowMenu] = useState(false)
   const [lenis, setLenis] = useState<Lenis | null>(null)
   const [isInServiceSection, setIsInServiceSection] = useState(false)
@@ -69,7 +72,15 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
 
   return (
     <GlobalContext.Provider
-      value={{ lenis, showMenu, setShowMenu, isScrolled, isInServiceSection }}
+      value={{
+        lenis,
+        showMenu,
+        setShowMenu,
+        isScrolled,
+        isInServiceSection,
+        price,
+        setPrice,
+      }}
     >
       {children}
     </GlobalContext.Provider>
