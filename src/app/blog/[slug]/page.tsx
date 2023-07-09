@@ -28,7 +28,7 @@ const Page = () => {
               building insightful strategy, creating unique designs and crafting
               experiences.
             </h2>
-            <p className="text-lg leading-[1.2] text-clr-muted">
+            <p className="text-lg leading-[1.5] text-clr-muted">
               Never let a bad design decesions ruin your business. We are here
               Transforming brands for growth Never let a bad design decesions
               ruin your business. We are here Transforming brands for growth
@@ -53,7 +53,7 @@ const Page = () => {
             <h2 className="text-2xl capitalize leading-[1.2] lg:text-4xl">
               building insightful strategy
             </h2>
-            <p className="text-lg leading-[1.2] text-clr-muted">
+            <p className="text-lg leading-[1.5] text-clr-muted">
               Never let a bad design decesions ruin your business. We are here
               Transforming brands for growth Never let a bad design decesions
               ruin your business. We are here Transforming brands for growth
@@ -75,7 +75,7 @@ const Page = () => {
                 className="absolute left-0 top-0 h-full w-full bg-gray-800/40 object-cover"
               />
             </div>
-            <p className="text-lg leading-[1.2] text-clr-muted">
+            <p className="text-lg leading-[1.5] text-clr-muted">
               Never let a bad design decesions ruin your business. We are here
               Transforming brands for growth Never let a bad design decesions
               ruin your business. We are here Transforming brands for growth
@@ -91,7 +91,7 @@ const Page = () => {
             <h2 className="text-2xl capitalize leading-[1.2] lg:text-4xl">
               creating unique designs.
             </h2>
-            <p className="text-lg leading-[1.2] text-clr-muted">
+            <p className="text-lg leading-[1.5] text-clr-muted">
               Never let a bad design decesions ruin your business. We are here
               Transforming brands for Lorem ipsum dolor sit, amet consectetur
               adipisicing elit. Facilis dicta accusamus unde quaerat beatae
@@ -125,7 +125,7 @@ const Page = () => {
             <h2 className="text-2xl capitalize leading-[1.2] lg:text-4xl">
               crafting experiences.
             </h2>
-            <p className="text-lg leading-[1.2] text-clr-muted">
+            <p className="text-lg leading-[1.5] text-clr-muted">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
               voluptatum dolor veniam error natus quisquam eos iure nesciunt
               debitis nisi labore, nihil molestiae totam delectus quidem

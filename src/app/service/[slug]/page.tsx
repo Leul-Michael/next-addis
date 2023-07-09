@@ -9,7 +9,7 @@ import { BsArrowDown } from "react-icons/bs"
 const Page = () => {
   return (
     <>
-      <section className="main-container relative flex flex-col pt-16">
+      <section className="main-container auto-h relative flex flex-col pt-16">
         <div className="flex flex-col gap-8 py-16 md:gap-14">
           <div className="flex flex-col gap-4">
             <p className="text-xs text-clr-muted">service / 01</p>
@@ -85,7 +85,7 @@ const Page = () => {
             />
           </div>
         </div>
-        <ContactExcerpt className="mb-0 mt-12" />
+        <ContactExcerpt className="mb-24 mt-0 sm:mb-0" />
       </section>
     </>
   )

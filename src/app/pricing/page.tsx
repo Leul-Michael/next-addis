@@ -29,7 +29,7 @@ const Page = () => {
       <CheckOutsideClick handler={() => setShowPrice(false)}>
         <TotalPrice show={showPrice} setShow={setShowPrice} />
       </CheckOutsideClick>
-      <section className="main-container relative flex flex-col pt-16">
+      <section className="main-container auto-h relative flex flex-col pt-16">
         <div className="flex flex-col gap-8 pt-16">
           <div className="flex flex-col gap-4">
             <p className="text-xs text-clr-muted">customize / pricing</p>
@@ -58,7 +58,7 @@ const Page = () => {
           </div>
         </div>
         <div
-          className={`mb-28 mt-12 flex flex-col gap-16 rounded-[14px] bg-clr-border/30 px-8 py-12 lg:px-12 lg:py-16`}
+          className={`mb-28 flex flex-col gap-16 rounded-[14px] bg-clr-border/30 px-8 py-12 lg:px-12 lg:py-16`}
         >
           <div className="mx-auto flex max-w-[600px] flex-col items-center justify-center gap-5 text-center">
             <h1 className="font-subtitle font-serif font-semibold leading-none">
