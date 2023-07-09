@@ -8,8 +8,8 @@ type TestimonialsExcerptProps = {
 const TestimonialsExcerpt = () => {
   return (
     <article
-      className={`relative flex h-full max-w-[500px] flex-col gap-5 overflow-hidden
-        rounded-[6px] bg-clr-border/30 px-5 pb-3 pt-5 lg:py-3`}
+      className={`relative flex h-full flex-col gap-5 overflow-hidden rounded-[6px]
+        bg-clr-border/30 px-5 pb-3 pt-5 lg:py-3`}
     >
       <div className="sticky left-0 top-0">
         <svg

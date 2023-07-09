@@ -21,7 +21,7 @@ module.exports = {
         "clr-dark-green": "hsl(var(--color-dark-green) / <alpha-value>)",
       },
       gridTemplateColumns: {
-        blog: "repeat(auto-fit, minmax(300px, 1fr))",
+        blog: "repeat(auto-fill, minmax(300px, 1fr))",
         tech: "repeat(auto-fill, minmax(120px, 1fr))",
         works: "repeat(auto-fill, minmax(450px, 1fr))",
       },
