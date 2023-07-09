@@ -1,7 +1,7 @@
 "use client"
 
 import useGlobals from "@/context/GlobalContext"
-import React, { Dispatch, SetStateAction } from "react"
+import React, { Dispatch, SetStateAction, useEffect } from "react"
 import { MdClose } from "react-icons/md"
 
 type TotalPriceProps = {
@@ -10,7 +10,15 @@ type TotalPriceProps = {
 }
 
 const TotalPrice = ({ show, setShow }: TotalPriceProps) => {
-  const { price } = useGlobals()
+  const { lenis } = useGlobals()
+
+  useEffect(() => {
+    show && lenis?.stop()
+    return () => {
+      lenis?.start()
+    }
+  }, [lenis, show])
+
   return (
     <article
       className={`${
@@ -30,8 +38,7 @@ const TotalPrice = ({ show, setShow }: TotalPriceProps) => {
       <div className="flex flex-col gap-4">
         <p>Your total price amounts to:</p>
         <h2 className="max-w-[900px] text-[2rem] font-semibold leading-none text-clr-accent">
-          <span className="pr-2 font-serif">$</span>
-          {price}
+          <CurrentPrice />
         </h2>
       </div>
     </article>
@@ -39,3 +46,33 @@ const TotalPrice = ({ show, setShow }: TotalPriceProps) => {
 }
 
 export default TotalPrice
+
+const CurrentPrice = () => {
+  const { price } = useGlobals()
+
+  return price.type === "design" ? (
+    price.amount >= 1200 ? (
+      <>
+        over
+        <span className="px-2 font-serif">$</span>
+        1200
+      </>
+    ) : (
+      <>
+        <span className="pr-2 font-serif">$</span>
+        {price.amount}
+      </>
+    )
+  ) : price.amount >= 1300 ? (
+    <>
+      over
+      <span className="px-2 font-serif">$</span>
+      1300
+    </>
+  ) : (
+    <>
+      <span className="pr-2 font-serif">$</span>
+      {price.amount}
+    </>
+  )
+}

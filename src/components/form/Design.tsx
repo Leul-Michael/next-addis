@@ -19,17 +19,17 @@ const Design = ({ onShow }: { onShow: () => void }) => {
 
   const calculatePrice: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    setPrice(500)
+    setPrice({ type: "design", amount: 500 })
     setPrice((prev) => {
       ;[...Object.entries(DesignOptions)].map((v) => {
         if (typeof v[1] === "number") {
           v[1] > 0
             ? v[1] === 1
-              ? (prev += 100)
-              : (prev += 100 + v[1] * 10)
+              ? { ...prev, amount: (prev.amount += 100) }
+              : { ...prev, amount: (prev.amount += 100 + v[1] * 10) }
             : prev
         } else {
-          v[1] ? (prev += 100) : prev
+          v[1] ? { ...prev, amount: (prev.amount += 100) } : prev
         }
       })
       return prev

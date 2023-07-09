@@ -10,6 +10,7 @@ import Mobile from "@/components/form/Mobile"
 import Software from "@/components/form/Software"
 import TotalPrice from "@/components/modal/TotalPrice"
 import { useCheckOutsideClick as CheckOutsideClick } from "@/hooks/useCheckOutsideClick"
+import Btncta from "@/components/Btncta"
 
 const opitons = {
   web: Web,
@@ -54,6 +55,21 @@ const Page = () => {
                 <SelectedService onShow={() => setShowPrice(true)} />
               ) : null}
             </div>
+          </div>
+        </div>
+        <div
+          className={`mb-28 mt-12 flex flex-col gap-16 rounded-[14px] bg-clr-border/30 px-8 py-12 lg:px-12 lg:py-16`}
+        >
+          <div className="mx-auto flex max-w-[600px] flex-col items-center justify-center gap-5 text-center">
+            <h1 className="font-subtitle font-serif font-semibold leading-none">
+              Want to Create your Own Custom Price?
+            </h1>
+            <p className="text-lg capitalize leading-[1.2] text-clr-font">
+              Contact us by adding your{" "}
+              <span className="font-medium underline">custom needs</span> for
+              more!
+            </p>
+            <Btncta className="self-center" to="/contact" name="Contact Us" />
           </div>
         </div>
       </section>

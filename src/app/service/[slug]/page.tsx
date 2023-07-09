@@ -1,6 +1,10 @@
+"use client"
+
 import ContactExcerpt from "@/components/excerpts/ContactExcerpt"
 import Image from "next/image"
-import React from "react"
+import Link from "next/link"
+import { useState } from "react"
+import { BsArrowDown } from "react-icons/bs"
 
 const Page = () => {
   return (
@@ -54,6 +58,33 @@ const Page = () => {
             </p>
           </div>
         </div>
+        <div className="flex flex-col gap-12 pb-12 pt-20">
+          <h1 className="font-subtitle mx-auto max-w-[900px] text-center font-serif font-semibold leading-none">
+            Works
+          </h1>
+          <div className="flex flex-col">
+            <Project
+              count={1}
+              href="/work/lools"
+              title={"Digital Innovation"}
+            />
+            <Project
+              count={2}
+              href="/work/lools"
+              title={"Digital Innovation"}
+            />
+            <Project
+              count={3}
+              href="/work/lools"
+              title={"Digital Innovation"}
+            />
+            <Project
+              count={4}
+              href="/work/lools"
+              title={"Digital Innovation"}
+            />
+          </div>
+        </div>
         <ContactExcerpt className="mb-0 mt-12" />
       </section>
     </>
@@ -61,3 +92,33 @@ const Page = () => {
 }
 
 export default Page
+
+const Project = ({
+  count,
+  title,
+  href,
+}: {
+  count: number
+  title: string
+  href: string
+}) => {
+  return (
+    <Link href={href} className="flex flex-col border-b border-clr-border">
+      <div className="group relative flex cursor-pointer items-center justify-between px-2 py-5 md:px-4">
+        <span className="custom-transition absolute bottom-0 left-0 -z-[1] h-0 w-full bg-clr-purple duration-300 group-hover:h-full"></span>
+        <p className="hidden max-w-[400px] text-2xl capitalize leading-[1.2] group-hover:text-[#151515] sm:flex lg:text-[1.8rem]">
+          0{count} /
+        </p>
+        <p className="max-w-[400px] text-2xl capitalize leading-[1.2] group-hover:text-[#151515] lg:text-[1.8rem]">
+          {title}
+        </p>
+        <BsArrowDown
+          size={20}
+          className={`custom-transition -rotate-90 text-clr-muted duration-300 group-hover:-rotate-[135deg] 
+            group-hover:text-[#151515]
+          `}
+        />
+      </div>
+    </Link>
+  )
+}

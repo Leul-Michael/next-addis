@@ -66,11 +66,14 @@ const Mobile = ({ onShow }: { onShow: () => void }) => {
       setErr({ for: "type" })
       return
     }
-    setPrice(mobileOptions.type?.label === "Hybrid" ? 600 : 500)
+    setPrice({
+      type: "mobile",
+      amount: mobileOptions.type?.label === "Hybrid" ? 600 : 500,
+    })
     setPrice((prev) => {
       ;[...Object.entries(mobileOptions)].map((v) => {
         if (typeof v[1] === "boolean") {
-          v[1] ? (prev += 100) : prev
+          v[1] ? { ...prev, amount: (prev.amount += 100) } : prev
         }
       })
       return prev

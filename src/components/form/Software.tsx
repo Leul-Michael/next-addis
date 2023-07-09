@@ -24,17 +24,15 @@ const Software = ({ onShow }: WebServiceProps) => {
 
   const calculatePrice: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    setPrice(500)
+    setPrice({ type: "web", amount: 500 })
     setPrice((prev) => {
       ;[...Object.entries(WebOptions)].map((v) => {
         if (typeof v[1] === "number") {
-          v[1] > 0
-            ? v[1] === 1
-              ? (prev += 100)
-              : (prev += 100 + v[1] * 10)
+          v[1] > 1
+            ? { ...prev, amount: (prev.amount += 100 + v[1] * 10) }
             : prev
         } else {
-          v[1] ? (prev += 100) : prev
+          v[1] ? { ...prev, amount: (prev.amount += 100) } : prev
         }
       })
       return prev
@@ -45,7 +43,7 @@ const Software = ({ onShow }: WebServiceProps) => {
   return (
     <form onSubmit={calculatePrice} className="flex flex-col gap-5">
       <h2 className="max-w-[900px] font-serif text-[2rem] font-semibold leading-none">
-        Web Devlopement
+        Software Devlopement
       </h2>
       <div className="flex flex-col items-start gap-5 lg:grid lg:grid-cols-[250px_1fr] lg:items-center">
         <label htmlFor="pages" className="capitalize">
