@@ -114,8 +114,8 @@ const Project = ({
         </p>
         <BsArrowDown
           size={20}
-          className={`custom-transition -rotate-90 text-clr-muted duration-300 group-hover:-rotate-[135deg] 
-            group-hover:text-[#151515]
+          className={`custom-transition -rotate-[135deg] text-clr-muted duration-300 group-hover:text-[#151515] lg:-rotate-90 
+            lg:group-hover:-rotate-[135deg]
           `}
         />
       </div>

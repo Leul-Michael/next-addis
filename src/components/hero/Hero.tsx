@@ -13,11 +13,6 @@ const Hero = () => {
     const ctx = gsap.context(() => {
       const t1 = gsap.timeline()
 
-      t1.set("#hero-subtext", {
-        y: 50,
-        opacity: 0,
-      })
-
       t1.to("#hero-video", {
         delay: -0.95,
         duration: 1.05,
@@ -28,14 +23,6 @@ const Hero = () => {
         delay: -0.75,
         duration: 0.75,
         stagger: 0.075,
-        y: 0,
-        ease: Expo.easeIn,
-      })
-      t1.to("#hero-subtext", {
-        delay: -0.5,
-        duration: 0.45,
-        stagger: 0.05,
-        opacity: 1,
         y: 0,
         ease: Expo.easeIn,
       })
@@ -73,17 +60,11 @@ const Hero = () => {
           </h1>
         </div>
         <div className="flex max-w-[400px] flex-col gap-8">
-          <p
-            id="hero-subtext"
-            className="text-xl leading-[1.2] text-clr-muted opacity-0"
-          >
+          <p className="text-xl leading-[1.2] text-clr-muted">
             We help <span className="font-medium underline">Fast Growth</span>{" "}
             Teams Scale Their Design Roadmaps At Lightning Speeds
           </p>
-          <div
-            id="hero-subtext"
-            className="flex flex-wrap items-center gap-4 opacity-0"
-          >
+          <div className="flex flex-wrap items-center gap-4">
             <Btncta name="Get a Quote" to="/contact" />
           </div>
         </div>
