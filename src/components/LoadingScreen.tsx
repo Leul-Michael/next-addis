@@ -115,7 +115,7 @@ const LoadingScreen = () => {
   return (
     <section
       id="landing-container"
-      className="fixed left-0 top-0 z-[200] flex h-screen w-screen flex-col items-center justify-center bg-clr-font text-clr-main"
+      className="fixed left-0 top-0 z-[200] flex h-screen w-screen flex-col items-center justify-center bg-clr-main text-clr-font"
     >
       <div className="flex flex-col">
         <h1
