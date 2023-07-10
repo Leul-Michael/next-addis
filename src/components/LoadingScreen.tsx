@@ -4,11 +4,13 @@ import useGlobals from "@/context/GlobalContext"
 import { gsap, Expo } from "gsap"
 import React, { useEffect } from "react"
 import imagesLoaded from "imagesloaded"
+import { usePathname } from "next/navigation"
 
 const words = ["Chance", "Luck", "Journey", "Partner", "ADDIS"]
 
 const LoadingScreen = () => {
   const { lenis, isPageLoaded, setIsPageLoaded } = useGlobals()
+  const pathname = usePathname()
 
   useEffect(() => {
     if (isPageLoaded) {
@@ -127,6 +129,8 @@ const LoadingScreen = () => {
       return () => window.removeEventListener("load", animatePage)
     }
   }, [setIsPageLoaded])
+
+  if (pathname !== "/" || isPageLoaded) return null
 
   return (
     <section
