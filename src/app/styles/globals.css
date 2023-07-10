@@ -437,3 +437,29 @@ html.lenis {
     justify-self: flex-end;
   }
 }
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(var(--color-purple));
+  border-radius: 50%;
+  transition: all .075s cubic-bezier(.5, .1, 0, 1);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+/* Hide scrollbar */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

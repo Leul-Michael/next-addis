@@ -13,7 +13,10 @@ import Testimonials from "@/components/hero/Testimonials"
 export default function Home() {
   return (
     <>
-      <div className="main-container flex flex-col rounded-[0px_0px_50px_50px]">
+      <div
+        id="hero"
+        className="main-container flex flex-col rounded-[0px_0px_50px_50px]"
+      >
         <section className="hero flex flex-col items-start justify-end pb-20 pt-40 md:justify-center md:py-16">
           <div className="flex w-full flex-col gap-20">
             <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-end">

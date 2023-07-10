@@ -17,6 +17,8 @@ type GlobalContextType = {
   lenis: Lenis | null
   showMenu: boolean
   setShowMenu: Dispatch<SetStateAction<boolean>>
+  isPageLoaded: boolean
+  setIsPageLoaded: Dispatch<SetStateAction<boolean>>
   isScrolled: boolean
   isInServiceSection: boolean
   price: {
@@ -47,6 +49,7 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
     amount: 500,
   })
   const [showMenu, setShowMenu] = useState(false)
+  const [isPageLoaded, setIsPageLoaded] = useState(false)
   const [lenis, setLenis] = useState<Lenis | null>(null)
   const [isInServiceSection, setIsInServiceSection] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -90,6 +93,8 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
         lenis,
         showMenu,
         setShowMenu,
+        isPageLoaded,
+        setIsPageLoaded,
         isScrolled,
         isInServiceSection,
         price,

@@ -5,6 +5,9 @@ import { GlobalContextProvider } from "@/context/GlobalContext"
 import FramerProvider from "@/components/FramerProvider"
 import Footer from "@/components/hero/Footer"
 import Script from "next/script"
+import LoadingScreen from "@/components/LoadingScreen"
+import WhatsupWedgit from "@/components/WhatsupWedgit"
+import CursorFollower from "@/components/CursorFollower"
 
 export const metadata = {
   title: "Create Next App",
@@ -22,10 +25,14 @@ export default function RootLayout({
         <FramerProvider>
           <ThemeProvider>
             <GlobalContextProvider>
+              {/* Main Loading Screen */}
+              <LoadingScreen />
+              {/* Curosr Follower */}
+              <CursorFollower />
               {/* Header Section */}
               <Header />
               <main>{children}</main>
-              <div className="elfsight-app-4fa86fda-b13f-424f-8d51-4b9af9137edc"></div>
+              <WhatsupWedgit />
               {/* Footer Section */}
               <Footer />
             </GlobalContextProvider>
