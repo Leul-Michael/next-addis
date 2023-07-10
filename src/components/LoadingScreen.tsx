@@ -23,24 +23,39 @@ const LoadingScreen = () => {
       const ctx = gsap.context(() => {
         const t1 = gsap.timeline()
 
+        t1.to(`#intro-text`, {
+          opacity: 1,
+        })
+
         imagesLoaded(document.querySelector("#hero")!, function () {
           words.forEach((w, i) => {
+            const currentWord = document.querySelector(`#intro-text #${w}`)
+            if (!currentWord) return
+            currentWord.innerHTML = currentWord!.textContent!.replace(
+              /\S/g,
+              `<span class="letter inline-block opacity-0">$&</span>`
+            )
+
+            t1.set(`#intro-text #${w}`, {
+              opacity: 1,
+            })
+
             if (i === w.length - 1) {
               t1.fromTo(
-                `#intro-text #${w}`,
+                `#${w} .letter`,
                 {
-                  duration: 0.5,
                   y: 50,
                   opacity: 0,
                 },
                 {
-                  duration: 1,
+                  duration: 0.4,
                   y: 0,
+                  stagger: 0.02,
                   opacity: 1,
                 }
               )
               t1.fromTo(
-                `#intro-text #${w}`,
+                `#${w} .letter`,
                 {
                   duration: 0.25,
                   opacity: 0,
@@ -51,7 +66,7 @@ const LoadingScreen = () => {
                 }
               )
               t1.fromTo(
-                `#intro-text #${w}`,
+                `#${w} .letter`,
                 {
                   duration: 0.25,
                   opacity: 0,
@@ -79,21 +94,22 @@ const LoadingScreen = () => {
               })
             } else {
               t1.fromTo(
-                `#intro-text #${w}`,
+                `#${w} .letter`,
                 {
-                  duration: 0.75,
                   y: 50,
                   opacity: 0,
                 },
                 {
-                  duration: 1,
+                  duration: 0.4,
                   y: 0,
+                  stagger: 0.05,
                   opacity: 1,
                 }
               )
-              t1.to(`#intro-text #${w}`, {
-                duration: 0.3,
+              t1.to(`#${w} .letter`, {
+                duration: 0.4,
                 y: -50,
+                stagger: 0.05,
                 opacity: 0,
                 ease: Expo.easeIn,
               })
@@ -129,7 +145,7 @@ const LoadingScreen = () => {
               <span
                 key={w}
                 id={w}
-                className="absolute left-0 top-0 leading-none opacity-0"
+                className="absolute left-0 top-0 flex items-center leading-none opacity-0"
               >
                 {w}
               </span>

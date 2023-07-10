@@ -3,6 +3,7 @@ import ParallaxText from "@/components/ParallaxText"
 import About from "@/components/hero/About"
 import Blog from "@/components/hero/Blog"
 import Contact from "@/components/hero/Contact"
+import Hero from "@/components/hero/Hero"
 import Pricing from "@/components/hero/Pricing"
 import Process from "@/components/hero/Process"
 import Project from "@/components/hero/Project"
@@ -20,9 +21,7 @@ export default function Home() {
         <section className="hero flex flex-col items-start justify-end pb-20 pt-40 md:justify-center md:py-16">
           <div className="flex w-full flex-col gap-20">
             <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-end">
-              <h1 className="font-title max-w-[600px] font-serif font-bold leading-none">
-                Digital Innovation You Need to Build, Scale & Grow.
-              </h1>
+              <Hero />
               <div className="flex max-w-[400px] flex-col gap-8">
                 <p className="text-xl leading-[1.2] text-clr-muted">
                   We help{" "}
